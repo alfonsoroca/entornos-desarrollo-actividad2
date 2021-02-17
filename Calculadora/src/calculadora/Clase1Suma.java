@@ -1,5 +1,7 @@
 package calculadora;
 
+// Esta clase es la que dejamos abandonada por ser 3 participantes en el grupo
+
 /**
  * Esta clase permite realizar diferentes operaciones de suma:
  * <ul>

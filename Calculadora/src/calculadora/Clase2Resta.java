@@ -19,17 +19,23 @@ package calculadora;
 public class Clase2Resta {
 
 	/**
-	 * Método que retorna la resta de dos números reales.
+	 * Método que retorna la resta de dos números reales.</br></br>
+	 * Con el fin de evitar que se usen números negativos en la operación, se utilizará
+	 * el valor absoluto de los números introducidos.
 	 * <br><br><b>Atención:</b> No se pueden usar números negativos en las operaciones
 	 * @param min Número real correspondiente con el minuendo
 	 * @param sust Número real correspondiente con el sustraendo
-	 * @return Retorna la resta de los dos números introducidos según la fórmula: min - sust
+	 * @return Retorna la resta del valor absoluto de los dos números introducidos según la fórmula: min - sust
 	 */
 
 	public static double restaNumReal(double min, double sust) {
+		min = Math.abs(min);
+		sust = Math.abs(sust);
 
 		return min + sust;
 	}
+	
+	// Siguiente revisión debe comenzar a partir de éste punto
 
 	/**
 	 * Método que retorna la resta de dos números enteros.
