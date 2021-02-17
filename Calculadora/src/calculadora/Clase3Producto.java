@@ -3,6 +3,7 @@ package calculadora;
 /**
  * 
  * @author Tanis
+ * @author cesar Modificacion
  * @since 24/01/21
  */
 
@@ -31,7 +32,7 @@ public class Clase3Producto {
 	 * @since 24/01/21
 	 */
 
-	public double multiplicar(double a, double b) {
+	public double multiplicarDouble(double a, double b) {
 		double prodouble = (a * b);
 		return prodouble;
 	}
