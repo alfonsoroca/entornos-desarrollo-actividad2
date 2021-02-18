@@ -32,24 +32,28 @@ public class Clase2Resta {
 		min = Math.abs(min);
 		sust = Math.abs(sust);
 
-		return min + sust;
+		return min - sust;
 	}
 	
-	// Siguiente revisión debe comenzar a partir de éste punto
 
 	/**
-	 * Método que retorna la resta de dos números enteros.
+	 * Método que retorna la resta de dos números entrero.</br></br>
+	 * Con el fin de evitar que se usen números negativos en la operación, se utilizará
+	 * el valor absoluto de los números introducidos.
 	 * <br><br><b>Atención:</b> No se pueden usar números negativos en las operaciones
 	 * @param min Número entero correspondiente con el minuendo
 	 * @param sust Número entero correspondiente con el sustraendo
-	 * @return Retorna la resta de los dos números introducidos según la fórmula: min - sust
+	 * @return Retorna la resta del valor absoluto de los dos números introducidos según la fórmula: min - sust
 	 */
 
 	public static int restaNumEnt(int min, int sust) {
+		min = Math.abs(min);
+		sust = Math.abs(sust);
 
-		return min + sust;
+		return min - sust;
 	}
 
+	// Siguiente revisión debe comenzar a partir de éste punto
 	/**
 	 * Método que retorna la resta de tres números reales.
 	 * <br><br><b>Atención:</b> No se pueden usar números negativos en las operaciones
