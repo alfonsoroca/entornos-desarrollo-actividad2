@@ -46,8 +46,8 @@ public class Clase3Producto {
 	 * @since 24/01/21
 	 */
 
-	public double multiplicar(double num1, double num2, double num3) {
-		double prodouble = (num1 * num2 * num3);
+	public double multiplicar3(double num1, double num2, double num3) {
+		double prodouble = (num1 * num2) * num3;
 		return prodouble;
 	}
 
