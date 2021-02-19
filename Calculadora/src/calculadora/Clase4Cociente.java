@@ -12,23 +12,23 @@ public class Clase4Cociente {
 	 * Recibe dos números reales y devuelve un {@code double} con el resultado de dividir ambos números.
 	 * <br>Casos especiales:
 	 * <ul><li>Si el parámetro que se pasa como divisor es 0, el método mostrará un aviso y devolverá un 
-	 * {@code double} con el valor Infinito.</li></ul>
+	 * {@code double} con el valor Infinito.</li>
+	 * <li>Si ambos parámetros son 0, el método devuelve un {@code double} con el valor NaN</li></ul>
 	 * 
-	 * @param a Dividendo de la operación.
-	 * @param b Divisor de la operación.
+	 * @param  a  Dividendo de la operación.
+	 * @param  b  Divisor de la operación.
 	 * @return Un {@code double}  con el cociente. En el caso de que el divisor <b>b</b> sea <b>0</b>, muestra un mensaje 
-	 * de aviso y devuelve <b>Infinito</b>.
+	 * de aviso y devuelve <b>Infinito</b> o <b>NaN</b>.
 	 */
 	public double divisionReales (double a, double b) {
 		/*Comprobar que el divisor no sea 0*/
 		if (b==0) {
 			System.out.println("AVISO: No se puede dividir por 0");
-			return a/b;
+			return a/b;			
 		}
 		else {
 			return a/b;
-		}
-		
+		}	
 	}
 	
 	/**
@@ -36,12 +36,13 @@ public class Clase4Cociente {
 	 * que resulta de dividir ambos números.
 	 * <br>Casos especiales:
 	 * <ul><li>Si el parámetro que se pasa como divisor es 0, el método mostrará un aviso y devolverá un 
-	 * {@code double} con el valor Infinito.</li></ul>
+	 * {@code double} con el valor Infinito.</li>
+	 * <li>Si ambos parámetros son 0, el método devuelve NaN</li></ul>
 	 * 
-	 * @param a Dividendo de la operación.
-	 * @param b Divisor de la operación.
-	 * @return un {@code double}, con el menor entero que resulta de la operación, o <b>Infinito</b> en 
-	 * el caso de que el divisor <b>b</b> sea <b>0</b>.
+	 * @param  a  Dividendo de la operación.
+	 * @param  b  Divisor de la operación.
+	 * @return un {@code double}, con el menor entero que resulta de la operación, <b>Infinito</b> en 
+	 * el caso de que el divisor <b>b</b> sea <b>0</b>, o <b>NaN</b> en caso de que ambos parámetros sean <b>0</b>.
 	 */
 	public double divisionEnteros (double a, double b) {
 		/*Eliminamos la parte decimal aproximando al entero inferior*/
@@ -64,7 +65,7 @@ public class Clase4Cociente {
 	 * <ul><li>Si el parámetro que se pasa es 0, el método mostrará un aviso y devolverá un 
 	 * {@code double} con el valor Infinito.</li></ul>
 	 * 
-	 * @param a El número del que se desea calcular el inverso.
+	 * @param  a  El número del que se desea calcular el inverso.
 	 * @return El inverso del número, o Infinito en caso de que éste sea 0.
 	 */
 	public double inverso (double a) {
@@ -76,10 +77,16 @@ public class Clase4Cociente {
 	}
 	
 	/**
-	 * Realiza la raíz cuadrada del número que se le pasa como parámetro.
-	 * @param a El número del que se desea saber la raíz cuadrada
-	 * @return La raíz cuadrada del parametro recibido.
+	 * Devuelve la raíz cuadrada positiva del {@code double} que se le pasa como parámetro.
+	 * <br>Casos especiales:
+	 * <ul><li>Si el argumento es NaN o menor que 0, entonces devuelve NaN.
+     * <li>Si el argumento es Infinito positivo, devuelve Infinito positivo.</li></ul>
+     * En cualquier otro caso, el resultado es un {@code double} con el valor más crecano
+     * a la verdadera raíz cuadrada del argumento.
+	 * @param  a  El número del que se desea saber la raíz cuadrada
+	 * @return La raíz cuadrada de {@code a}. Si el argumento es NaN o menor que 0, devuelve NaN.	
 	 */
+	 
 	public double raizCuadrada (double a) {
 		return Math.sqrt(a);
 	}
