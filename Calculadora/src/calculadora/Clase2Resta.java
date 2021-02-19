@@ -86,16 +86,13 @@ public class Clase2Resta {
 		return (min - sust1) - sust2;
 	}
 
-// Siguiente revisión debe comenzar a partir de éste punto
 	/**
-	 * Método que acumula el resultado de los números introducidos a través del
-	 * método acumular.<br>
+	 * Método que acumula los números introducidos a través del método acumular.<br>
 	 * <br>
-	 * Con el fin de evitar que se usen números negativos en la operación, se
-	 * utilizará el valor absoluto de los números introducidos. <br>
-	 * <br> 
-	 * Para la resta de un número, se debe indicar con un signo "-" delante del
-	 * número introducido, en caso contrario el número se añadirá al acumulado
+	 * Para añadir números al acumulador se deben introducir los números sin ningún
+	 * signo delante (ej. 1345.26) Para restar números al acumulador se deben
+	 * introducir los números con un signo "-" delante del número introducido (ej.
+	 * -758.31)
 	 * 
 	 * @param num Número real que se quiere añadir/restar al acumulado
 	 */
