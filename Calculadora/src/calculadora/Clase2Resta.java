@@ -91,6 +91,9 @@ public class Clase2Resta {
 	 * Método que acumula el resultado de los números introducidos a través del
 	 * método acumular.<br>
 	 * <br>
+	 * Con el fin de evitar que se usen números negativos en la operación, se
+	 * utilizará el valor absoluto de los números introducidos. <br>
+	 * <br> 
 	 * Para la resta de un número, se debe indicar con un signo "-" delante del
 	 * número introducido, en caso contrario el número se añadirá al acumulado
 	 * 
