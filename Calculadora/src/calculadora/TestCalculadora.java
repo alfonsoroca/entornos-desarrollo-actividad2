@@ -2,13 +2,21 @@ package calculadora;
 
 /**
  * Clase que sirve para comprobar la funcionalidad de las distintas clases y
- * m�todos del proyecto calculadora
+ * metodos del proyecto calculadora
  * 
  */
 
 public class TestCalculadora {
 
 	public static void main(String[] args) {
+		
+		/**
+		 * Llamada al metodo que realiza la resta de dos n�mero reales pas�ndole
+		 * como argumentos el 21.23 y el 17.16
+		 */
+
+		System.out.println(Clase2Resta.restaNumReal(21.23, 17.16));
+
 		
 		//Prueba Clase4Cociente
 		Clase4Cociente c4test = new Clase4Cociente();
@@ -21,26 +29,19 @@ public class TestCalculadora {
 		double masInf = Double.POSITIVE_INFINITY;
 		double menInf = Double.NEGATIVE_INFINITY;
 		//divisionReales
-		System.out.println("Prueba m�todo divisionReales");
+		System.out.println("Prueba metodo divisionReales");
 		System.out.println(c4test.divisionReales(real1, real2));
 		//divisionEnteros
-		System.out.println("Prueba m�todo divisionEnteros");
+		System.out.println("Prueba metodo divisionEnteros");
 		System.out.println(c4test.divisionEnteros(ent1, ent2));
 		//inverso
-		System.out.println("Prueba m�todo divisionReales");
+		System.out.println("Prueba metodo inverso");
 		System.out.println(c4test.inverso(zero));
+		System.out.println(c4test.inverso(menInf));
+		System.out.println(c4test.inverso(nan));
 		//raizcuadrada
-		System.out.println("Prueba m�todo ra�zCuadrada");
+		System.out.println("Prueba metodo raizCuadrada");
 		System.out.println(c4test.raizCuadrada(nan));
-		
-
-		/**
-		 * Llamada al m�todo que realiza la resta de dos n�mero reales pas�ndole
-		 * como argumentos el 21.23 y el 17.16
-		 */
-
-		System.out.println(Clase2Resta.restaNumReal(21.23, 17.16));
-
 
 
 	}

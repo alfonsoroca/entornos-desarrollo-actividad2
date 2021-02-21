@@ -64,6 +64,11 @@ public class Clase4Cociente {
 	 * <br>Casos especiales:
 	 * <ul><li>Si el parámetro que se pasa es 0, el método mostrará un aviso y devolverá un 
 	 * {@code double} con el valor Infinito.</li></ul>
+	 * <li>Si el parámetro pasado es {@value Double#POSITIVE_INFINITY} el método devolverá
+	 * un 0.</li>
+	 * <li>Si el parámetro pasado es {@value Double#NEGATIVE_INFINITY} el método devolverá
+	 * un -0.</li>
+	 * <li>Si el parámetro introducido en {@value Double#NaN} devolverá {@value Double#NaN}.
 	 * 
 	 * @param  a  El número del que se desea calcular el inverso.
 	 * @return El inverso del número, o Infinito en caso de que éste sea 0.
