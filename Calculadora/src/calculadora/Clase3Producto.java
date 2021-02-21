@@ -43,9 +43,9 @@ public class Clase3Producto {
 	 * @since 24/01/21
 	 */
 
-	public double multiplicar(double num1, double num2, double num3) {
-		double prodouble = (num1 * num2) * num3;
-		return prodouble;
+	public double multiplicar3(double num1, double num2, double num3) {
+		double resultadomultiplicar3 = (num1 * num2) * num3;
+		return resultadomultiplicar3;
 	}
 
 	/**
@@ -56,8 +56,8 @@ public class Clase3Producto {
 	 */
 
 	public double potencia(double num1, double num2) {
-		double pot = (Math.pow(num1, num2));
-		return pot;
+		double resultadopotencia = (Math.pow(num1, num2));
+		return resultadopotencia;
 
 	}
 }
