@@ -7,7 +7,6 @@ package calculadora;
  * @since 24/01/21
  */
 
-
 public class Clase3Producto {
 	/**
 	 * @param num1 número entero que es el primer factor
@@ -17,12 +16,13 @@ public class Clase3Producto {
 	 */
 
 	public static int multiplicarEntero(int num1, int num2) {
-		int prodint = (num1 * num2);
-		return prodint;
+		
+		return num1 * num2;
 	}
 
 	/**
-	 *<b>ATENCIÓN:</b> Números grandes pueden provocar error si el resultado del double supera los digitos que soporta
+	 * <b>ATENCIÓN:</b> Números grandes pueden provocar error si el resultado del
+	 * double supera los digitos que soporta
 	 * 
 	 * @param num1 número real que es el primer factor
 	 * @param num2 número real que es el segundo factor
@@ -31,8 +31,8 @@ public class Clase3Producto {
 	 */
 
 	public static double multiplicarDouble(double num1, double num2) {
-		double prodouble = (num1 * num2);
-		return prodouble;
+
+		return num1 * num2;
 	}
 
 	/**
@@ -44,8 +44,8 @@ public class Clase3Producto {
 	 */
 
 	public static double multiplicar3(double num1, double num2, double num3) {
-		double resultadomultiplicar3 = (num1 * num2) * num3;
-		return resultadomultiplicar3;
+
+		return (num1 * num2) * num3;
 	}
 
 	/**
@@ -56,8 +56,8 @@ public class Clase3Producto {
 	 */
 
 	public static double potencia(double num1, double num2) {
-		double resultadopotencia = (Math.pow(num1, num2));
-		return resultadopotencia;
+
+		return Math.pow(num1, num2);
 
 	}
 }
