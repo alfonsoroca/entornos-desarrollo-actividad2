@@ -2,14 +2,15 @@ package calculadora;
 
 /**
  * Clase que sirve para comprobar la funcionalidad de las distintas clases y
- * métodos del proyecto calculadora
+ * mï¿½todos del proyecto calculadora
  * 
  */
 
 public class TestCalculadora {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		System.out.println("prueba conflicto de sobrescritura");
 
 	}
 
