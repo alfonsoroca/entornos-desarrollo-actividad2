@@ -16,7 +16,7 @@ public class Clase3Producto {
 	 * @since 24/01/21
 	 */
 
-	public int multiplicarEntero(int num1, int num2) {
+	public static int multiplicarEntero(int num1, int num2) {
 		int prodint = (num1 * num2);
 		return prodint;
 	}
@@ -30,7 +30,7 @@ public class Clase3Producto {
 	 * @since 24/01/21
 	 */
 
-	public double multiplicarDouble(double num1, double num2) {
+	public static double multiplicarDouble(double num1, double num2) {
 		double prodouble = (num1 * num2);
 		return prodouble;
 	}
@@ -43,7 +43,7 @@ public class Clase3Producto {
 	 * @since 24/01/21
 	 */
 
-	public double multiplicar3(double num1, double num2, double num3) {
+	public static double multiplicar3(double num1, double num2, double num3) {
 		double resultadomultiplicar3 = (num1 * num2) * num3;
 		return resultadomultiplicar3;
 	}
@@ -55,7 +55,7 @@ public class Clase3Producto {
 	 * @since 24/01/21
 	 */
 
-	public double potencia(double num1, double num2) {
+	public static double potencia(double num1, double num2) {
 		double resultadopotencia = (Math.pow(num1, num2));
 		return resultadopotencia;
 
