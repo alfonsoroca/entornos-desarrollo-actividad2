@@ -11,7 +11,7 @@ public class Clase4Cociente {
 	/**
 	 * Recibe dos números reales y devuelve un {@code double} con el resultado de dividir ambos números.
 	 * <br>Casos especiales:
-	 * <ul><li>Si el par�metro que se pasa como divisor es 0, el m�todo mostrará un aviso y devolverá un 
+	 * <ul><li>Si el parámetro que se pasa como divisor es 0, el método mostrará un aviso y devolverá un 
 	 * {@code double} con el valor Infinito.</li>
 	 * <li>Si ambos parámetros son 0, el método devuelve un {@code double} con el valor NaN</li></ul>
 	 * 
