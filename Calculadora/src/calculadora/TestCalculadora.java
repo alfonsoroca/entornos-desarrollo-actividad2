@@ -9,7 +9,11 @@ package calculadora;
 public class TestCalculadora {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		/**
+		 * Llamada al método
+		 */
+		
+		System.out.println(Clase2Resta.restaNumEnt(19, 17));
 
 	}
 
