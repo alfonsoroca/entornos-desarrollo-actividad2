@@ -10,10 +10,11 @@ public class TestCalculadora {
 
 	public static void main(String[] args) {
 		/**
-		 * Llamada al método
+		 * Llamada al método que realiza la resta de dos número reales pasándole
+		 * como argumentos el 21.23 y el 17.16
 		 */
-		
-		System.out.println(Clase2Resta.restaNumEnt(19, 17));
+
+		System.out.println(Clase2Resta.restaNumReal(21.23, 17.16));
 
 	}
 
