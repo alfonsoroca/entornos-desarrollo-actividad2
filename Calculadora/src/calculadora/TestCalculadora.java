@@ -2,7 +2,7 @@ package calculadora;
 
 /**
  * Clase que sirve para comprobar la funcionalidad de las distintas clases y
- * métodos del proyecto calculadora
+ * mï¿½todos del proyecto calculadora
  * 
  */
 
@@ -21,20 +21,27 @@ public class TestCalculadora {
 		double masInf = Double.POSITIVE_INFINITY;
 		double menInf = Double.NEGATIVE_INFINITY;
 		//divisionReales
-		System.out.println("Prueba método divisionReales");
+		System.out.println("Prueba mï¿½todo divisionReales");
 		System.out.println(c4test.divisionReales(real1, real2));
 		//divisionEnteros
-		System.out.println("Prueba método divisionEnteros");
+		System.out.println("Prueba mï¿½todo divisionEnteros");
 		System.out.println(c4test.divisionEnteros(ent1, ent2));
 		//inverso
-		System.out.println("Prueba método divisionReales");
+		System.out.println("Prueba mï¿½todo divisionReales");
 		System.out.println(c4test.inverso(zero));
 		//raizcuadrada
-		System.out.println("Prueba método raízCuadrada");
+		System.out.println("Prueba mï¿½todo raï¿½zCuadrada");
 		System.out.println(c4test.raizCuadrada(nan));
 		
 
-				
+		/**
+		 * Llamada al mï¿½todo que realiza la resta de dos nï¿½mero reales pasï¿½ndole
+		 * como argumentos el 21.23 y el 17.16
+		 */
+
+		System.out.println(Clase2Resta.restaNumReal(21.23, 17.16));
+
+
 
 	}
 
