@@ -17,7 +17,6 @@ public class TestCalculadora {
 
 		System.out.println(Clase2Resta.restaNumReal(21.23, 17.16));
 
-
 	}
 
 }
