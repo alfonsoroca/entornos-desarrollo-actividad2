@@ -40,7 +40,21 @@ public class TestCalculadora {
 		System.out.println("Prueba multiplicarDouble: " + "\n" + Clase3Producto.multiplicarDouble(ent1, ent2) );
 		System.out.println("Prueba multiplicar3: " + "\n" + Clase3Producto.multiplicar3(real2, ent1, real1));
 		System.out.println("Prueba Potencia: " + "\n" + Clase3Producto.potencia(real2, ent2));
-
+		
+		//Prueba Clase2Resta		
+		int int1 = 150000;
+		int int2 = 12356;
+		double double1 = 136531.536944;
+		double double2 = 478931.123568;
+		double double3 = 1323231.268944;
+		
+		System.out.println("\n----- Inicio de las pruebas de la Clase2Resta -----\n");
+		System.out.println("\nPrueba del método restaNumReal con 2 parámetros: " + Clase2Resta.restaNumReal(double1, double2));
+		System.out.println("\nPrueba del método restaNumEnt: " + Clase2Resta.restaNumEnt(int1, int2));
+		System.out.println("\nPrueba del método restaNumReal con 3 parámetros: " + Clase2Resta.restaNumReal(double1, double2, double3));
+		System.out.println("\nPrueba del método acumular-----");
+		System.out.println("\nHas pulsado el 0 y has salido del acumulador. El total acumulado asciende a: " + Clase2Resta.acumular());
+		System.out.println("\n----- Fin de las pruebas de la Clase2Resta -----\n");
 	}
 
 }
