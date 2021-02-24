@@ -1,5 +1,7 @@
 package calculadora;
 
+import java.util.Scanner;
+
 // Esta clase es la que dejamos abandonada por ser 3 participantes en el grupo
 
 /**
@@ -71,16 +73,31 @@ public class Clase1Suma {
 	 * 
 	 */
 
-	public static void sumatorio(double num) {
-
-		acumulado += num;
-
+	public static double sumatorio() {
+		double acumulado = 0;
+		double sumador = 0;
+		//pedimos un valor por teclado y entra en el bucle siempre que no sea 0
+		System.out.println("Inserta numeros para realizar una suma acumulativa. \n Si introduces 0 acabara, para indicar decimales utilizar ','\n");
+		Scanner sc= new Scanner(System.in);
+			acumulado = sc.nextDouble();
+		//mientras el valor añadido no sea 0, se ejecuta el bucle añadiendo todos los valores introducicos
+		while(sumador != 0) {
+			System.out.println("Siguiente valor. \nRecuerda: si introduces 0 acabara y ',' para decimales\n");
+			Scanner valor= new Scanner(System.in);
+				sumador = valor.nextDouble();
+				acumulado += sumador;
+		
+		}
+		//retorna el valor del valor acumuado
+		//valor.close();
+		sc.close();
+		return acumulado;
+		
+		
 	}
 	/**
 	 * En la variable almacenamos el valor del sumatorio de todos los 
 	 * n�meros introducidos a trav�s del m�todo sumatorio
 	 */
-
-	public static double acumulado;
-
+ 
 }
