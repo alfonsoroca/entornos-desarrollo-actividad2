@@ -5,27 +5,28 @@ package calculadora;
 /**
  * Esta clase permite realizar diferentes operaciones de suma:
  * <ul>
- * <li>Suma de dos números reales</li>
- * <li>Suma de dos números enteros</li>
- * <li>Suma de tres números reales</li>
+ * <li>Suma de dos nï¿½meros reales</li>
+ * <li>Suma de dos nï¿½meros enteros</li>
+ * <li>Suma de tres nï¿½meros reales</li>
  * <li>Suma acumulativa</li>
  * </ul>
  * <br>
- * <b>ATENCIÓN:</b> No se pueden usar números negativos en las operaciones
+ * <b>ATENCIï¿½N:</b> No se pueden usar nï¿½meros negativos en las operaciones
  * 
  * @author Alfonso, Estanislao, Rafael
  * @since 24/01/2021
  * 
+ * Clase realizada por @Rafa tras la unificacion de grupos
  */
 
 public class Clase1Suma {
 
 	/**
-	 * Método que retorna la suma de dos números reales.
-	 * <br><br><b>Atención:</b> No se pueden usar números negativos en las operaciones
-	 * @param sum1 Número real correspondiente con el primer sumando
-	 * @param sum2 Número real correspondiente con el segundo sumando
-	 * @return Retorna la suma de los dos sumandos introducidos según la fórmula: sum1 + sum2
+	 * Mï¿½todo que retorna la suma de dos nï¿½meros reales.
+	 * <br><br><b>Atenciï¿½n:</b> No se pueden usar nï¿½meros negativos en las operaciones
+	 * @param sum1 Nï¿½mero real correspondiente con el primer sumando
+	 * @param sum2 Nï¿½mero real correspondiente con el segundo sumando
+	 * @return Retorna la suma de los dos sumandos introducidos segï¿½n la fï¿½rmula: sum1 + sum2
 	 *  
 	 */
 
@@ -35,11 +36,11 @@ public class Clase1Suma {
 	}
 
 	/**
-	 * Método que retorna la suma de dos números enteros.
-	 * <br><br><b>Atención:</b> No se pueden usar números negativos en las operaciones
-	 * @param sum1 Número entero correspondiente con el primer sumando
-	 * @param sum2 Número entero correspondiente con el segundo sumando
-	 * @return Retorna la suma de los dos sumandos introducidos según la fórmula: sum1 + sum2
+	 * Mï¿½todo que retorna la suma de dos nï¿½meros enteros.
+	 * <br><br><b>Atenciï¿½n:</b> No se pueden usar nï¿½meros negativos en las operaciones
+	 * @param sum1 Nï¿½mero entero correspondiente con el primer sumando
+	 * @param sum2 Nï¿½mero entero correspondiente con el segundo sumando
+	 * @return Retorna la suma de los dos sumandos introducidos segï¿½n la fï¿½rmula: sum1 + sum2
 	 * 
 	 */
 
@@ -49,12 +50,12 @@ public class Clase1Suma {
 	}
 
 	/**
-	 * Método que retorna la suma de tres números reales.
-	 * <br><br><b>Atención:</b> No se pueden usar números negativos en las operaciones 
-	 * @param sum1 Número real correspondiente con el primer sumando
-	 * @param sum2 Número real correspondiente con el segundo sumando
-	 * @param sum3 Número real correspondiente con el tercer sumando
-	 * @return Retorna la suma de los tres sumandos introducidos según la fórmula: sum1 + sum2 + sum3
+	 * Mï¿½todo que retorna la suma de tres nï¿½meros reales.
+	 * <br><br><b>Atenciï¿½n:</b> No se pueden usar nï¿½meros negativos en las operaciones 
+	 * @param sum1 Nï¿½mero real correspondiente con el primer sumando
+	 * @param sum2 Nï¿½mero real correspondiente con el segundo sumando
+	 * @param sum3 Nï¿½mero real correspondiente con el tercer sumando
+	 * @return Retorna la suma de los tres sumandos introducidos segï¿½n la fï¿½rmula: sum1 + sum2 + sum3
 	 * 
 	 */
 
@@ -64,9 +65,9 @@ public class Clase1Suma {
 	}
 	
 	/**
-	 * Método para sumar acumulativamente diferentes números reales
-	 * <br><br><b>Atención:</b> No se pueden usar números negativos en las operaciones
-	 * @param num Número real que se quiere añadir al sumatorio
+	 * Mï¿½todo para sumar acumulativamente diferentes nï¿½meros reales
+	 * <br><br><b>Atenciï¿½n:</b> No se pueden usar nï¿½meros negativos en las operaciones
+	 * @param num Nï¿½mero real que se quiere aï¿½adir al sumatorio
 	 * 
 	 */
 
@@ -77,7 +78,7 @@ public class Clase1Suma {
 	}
 	/**
 	 * En la variable almacenamos el valor del sumatorio de todos los 
-	 * números introducidos a través del método sumatorio
+	 * nï¿½meros introducidos a travï¿½s del mï¿½todo sumatorio
 	 */
 
 	public static double acumulado;
