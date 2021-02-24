@@ -36,7 +36,7 @@ public class TestCalculadora {
 		System.out.println(c4test.raizCuadrada(nan));
 
 		//Prueba Clase3Producto
-		System.out.println("\n" + "\n" + "Prueba multiplicarEntero:" + "\n" + Clase3Producto.multiplicarEntero(-5, 4));
+		System.out.println("\n" + "\n" + "Prueba multiplicarEntero:" + "\n" + Clase3Producto.multiplicarEntero(22, 4));
 		System.out.println("Prueba multiplicarDouble: " + "\n" + Clase3Producto.multiplicarDouble(ent1, ent2) );
 		System.out.println("Prueba multiplicar3: " + "\n" + Clase3Producto.multiplicar3(real2, ent1, real1));
 		System.out.println("Prueba Potencia: " + "\n" + Clase3Producto.potencia(real2, ent2));
