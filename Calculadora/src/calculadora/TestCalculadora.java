@@ -10,6 +10,26 @@ public class TestCalculadora {
 
 	public static void main(String[] args) {
 		
+		//Prueba Clase1Suma
+		//variables compartidas para las pruebas
+		double sumador1 = 20.98;
+		double sumador2 = 24.36;
+		
+		//sumar dos numeros reales
+		System.out.println(Clase1Suma.sumaNumReal(sumador1, sumador2));
+		
+		//sumar dos numeros enteros
+		System.out.println(Clase1Suma.sumaNumEnt(14, 57));
+		
+		//sumar tres numeros reales
+		System.out.println(Clase1Suma.sumaNumReal(sumador1, sumador2,-15));
+		//acumular numeros sumandolos
+		
+		Clase1Suma.sumatorio();
+		
+		System.out.println("\n-----------  FIN PRUEBA cLASE1SUMA --------------\n");
+		//-----------  FIN PRUEBA cLASE1SUMA --------------
+	
 		//Prueba Clase4Cociente
 		Clase4Cociente c4test = new Clase4Cociente();
 		double real1 = 25.67;
