@@ -1,1 +1,3 @@
-/.metadata/
+#Exclude all except /src
+/*
+!/src
