@@ -10,6 +10,26 @@ public class TestCalculadora {
 
 	public static void main(String[] args) {
 		
+		//Prueba Clase1Suma
+		//variables compartidas para las pruebas
+		double sumador1 = 20.98;
+		double sumador2 = 24.36;
+		
+		//sumar dos numeros reales
+		System.out.println(Clase1Suma.sumaNumReal(sumador1, sumador2));
+		
+		//sumar dos numeros enteros
+		System.out.println(Clase1Suma.sumaNumEnt(14, 57));
+		
+		//sumar tres numeros reales
+		System.out.println(Clase1Suma.sumaNumReal(sumador1, sumador2,-15));
+		//acumular numeros sumandolos
+		
+		Clase1Suma.sumatorio();
+		
+		System.out.println("\n-----------  FIN PRUEBA cLASE1SUMA --------------\n");
+		//-----------  FIN PRUEBA cLASE1SUMA --------------
+	
 		//Prueba Clase4Cociente
 		Clase4Cociente c4test = new Clase4Cociente();
 		double real1 = 25.67;
@@ -39,7 +59,7 @@ public class TestCalculadora {
 		System.out.println("\n" + "\n" + "Prueba multiplicarEntero:" + "\n" + Clase3Producto.multiplicarEntero(-5, 4));
 		System.out.println("Prueba multiplicarDouble: " + "\n" + Clase3Producto.multiplicarDouble(ent1, ent2) );
 		System.out.println("Prueba multiplicar3: " + "\n" + Clase3Producto.multiplicar3(real2, ent1, real1));
-		System.out.println("Prueba Potencia: " + "\n" + Clase3Producto.potencia(real2, ent2));
+		System.out.println("Prueba Potencia: " + "\n" + Clase3Producto.potencia(2, 5));
 		
 		//Inicio pruebas Clase2Resta		
 		int int1 = 150000;
@@ -61,6 +81,7 @@ public class TestCalculadora {
 		
 		//Prueba del método acumular
 		System.out.println("\nPrueba del método acumular-----");
+
 		System.out.println("\nHas pulsado el 0 y has salido del acumulador. El total acumulado asciende a: " + Clase2Resta.acumular());
 		System.out.println("\n----- Fin de las pruebas de la Clase2Resta -----\n");
 		
