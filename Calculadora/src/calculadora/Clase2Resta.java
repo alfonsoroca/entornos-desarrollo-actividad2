@@ -72,7 +72,7 @@ public class Clase2Resta {
 	 * Se introducirán los números por consola hasta que se quiera salir del
 	 * acumulador, para lo que se deberá introducir el caracter 0.<br>
 	 * <br>
-	 * 	<b>Atención</b>
+	 * <b>Atención</b>
 	 * Para introducir decimales se debe utilizar el carácter "," (ej. 12345,6485)
 	 * 
 	 * @return Retorna un {@code double} con el valor acumulado de todos los números introducidos
