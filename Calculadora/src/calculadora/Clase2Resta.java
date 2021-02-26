@@ -5,9 +5,9 @@ import java.util.Scanner;
 /**
  * Esta clase permite realizar diferentes operaciones de resta:
  * <ul>
- * <li>Resta de dos números reales</li>
- * <li>Resta de dos números enteros</li>
- * <li>Resta de tres números reales</li>
+ * <li>Resta de dos nï¿½meros reales</li>
+ * <li>Resta de dos nï¿½meros enteros</li>
+ * <li>Resta de tres nï¿½meros reales</li>
  * <li>Resta recurrente</li>
  * </ul>
  * 
@@ -18,11 +18,11 @@ import java.util.Scanner;
 public class Clase2Resta {
 
 	/**
-	 * Método que retorna la resta de dos números reales.
+	 * Mï¿½todo que retorna la resta de dos nï¿½meros reales.
 	 * 
-	 * @param a Número real correspondiente con el minuendo
-	 * @param b Número real correspondiente con el sustraendo
-	 * @return Retorna un {@code double} con el valor de la resta de los números introducidos según la fórmula: a - b
+	 * @param a Nï¿½mero real correspondiente con el minuendo
+	 * @param b Nï¿½mero real correspondiente con el sustraendo
+	 * @return Retorna un {@code double} con el valor de la resta de los nï¿½meros introducidos segï¿½n la fï¿½rmula: a - b
 	 */
 
 	public static double restaNumReal(double a, double b) {
@@ -33,11 +33,11 @@ public class Clase2Resta {
 	}
 
 	/**
-	 * Método que retorna la resta de dos números enteros.
+	 * Mï¿½todo que retorna la resta de dos nï¿½meros enteros.
 	 * 
-	 * @param a Número entero correspondiente con el minuendo
-	 * @param b Número entero correspondiente con el sustraendo
-	 * @return Retorna un {@code int} con el valor de la resta de los dos números introducidos según la fórmula: a
+	 * @param a Nï¿½mero entero correspondiente con el minuendo
+	 * @param b Nï¿½mero entero correspondiente con el sustraendo
+	 * @return Retorna un {@code int} con el valor de la resta de los dos nï¿½meros introducidos segï¿½n la fï¿½rmula: a
 	 *         - b
 	 */
 
@@ -49,12 +49,12 @@ public class Clase2Resta {
 	}
 
 	/**
-	 * Método que retorna la resta de tres números reales.
+	 * Mï¿½todo que retorna la resta de tres nï¿½meros reales.
 	 * 
-	 * @param a Número real correspondiente con el minuendo
-	 * @param b Número real correspondiente con el primer sustraendo
-	 * @param c Número real correspondiente con el segundo sustraendo
-	 * @return Retorna un {@code double} con el valor de la resta de los tres números introducidos según la fórmula:
+	 * @param a Nï¿½mero real correspondiente con el minuendo
+	 * @param b Nï¿½mero real correspondiente con el primer sustraendo
+	 * @param c Nï¿½mero real correspondiente con el segundo sustraendo
+	 * @return Retorna un {@code double} con el valor de la resta de los tres nï¿½meros introducidos segï¿½n la fï¿½rmula:
 	 *         (a - b) - c
 	 */
 
@@ -67,15 +67,15 @@ public class Clase2Resta {
 	}
 
 	/**
-	 * Método que acumula los números introducidos a través del método acumular.<br>
+	 * Mï¿½todo que acumula los nï¿½meros introducidos a travï¿½s del mï¿½todo acumular.<br>
 	 * 
-	 * Se introducirán los números por consola hasta que se quiera salir del
-	 * acumulador, para lo que se deberá introducir el caracter 0.<br>
+	 * Se introducirï¿½n los nï¿½meros por consola hasta que se quiera salir del
+	 * acumulador, para lo que se deberï¿½ introducir el caracter 0.<br>
 	 * <br>
-	 * 	<b>Atención</b>
-	 * Para introducir decimales se debe utilizar el carácter "," (ej. 12345,6485)
+	 * 	<b>Atenciï¿½n</b>
+	 * Para introducir decimales se debe utilizar el carï¿½cter "," (ej. 12345,6485)
 	 * 
-	 * @return Retorna un {@code double} con el valor acumulado de todos los números introducidos
+	 * @return Retorna un {@code double} con el valor acumulado de todos los nï¿½meros introducidos
 	 */
 
 	public static double acumular() {
@@ -83,13 +83,13 @@ public class Clase2Resta {
 		double numero = 0;
 		double acumulado = 0;
 
-		System.out.println("Introduce el primer número que quieres añadir al acumulador (el carácter decimal es la coma).....");
+		System.out.println("Introduce el primer nï¿½mero que quieres aï¿½adir al acumulador (el carï¿½cter decimal es la coma).....");
 		numero = sc.nextDouble();
 		acumulado += numero;
 
 		while (numero != 0) {
 			System.out.println(
-					"Introduce otro número (el carácter decimal es la coma) para sumar o restar (resta con signo - delante) al acumulador, si quieres salir introduce el 0....");
+					"Introduce otro nï¿½mero (el carï¿½cter decimal es la coma) para sumar o restar (resta con signo - delante) al acumulador, si quieres salir introduce el 0....");
 			numero = sc.nextDouble();
 			acumulado += numero;
 		}
