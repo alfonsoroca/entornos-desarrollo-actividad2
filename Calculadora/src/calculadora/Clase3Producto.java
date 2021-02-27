@@ -14,23 +14,16 @@ public class Clase3Producto {
 	 * @return devuelve el producto de ambos factores
 	 * @since 24/01/21
 	 * 
-	 * <li>Si uno de los parametros es inferior a 0 no se calculará.</li> 
 	 * 
 	 */
 	
 	public static int multiplicarEntero(int num1, int num2) {
-		if (num1 < 0|| num2 < 0) {
-			System.out.println("ERROR: intoduce un numero positivo");
-			return 0;
-		}else {
+
 		return num1 * num2;
-		}
+		
 	}
 
-	/**
-	 * <b>ATENION:</b> Numero grandes pueden provocar error si el resultado del
-	 * double supera los digitos que soporta
-	 * <li>Si uno de los parametros es inferior a 0 no se calculará.</li> 
+	/** 
 	 * 
 	 * @param num1  Numero real que es el primer factor
 	 * @param num2  Numero real que es el segundo factor
@@ -44,7 +37,6 @@ public class Clase3Producto {
 	}
 
 	/**
-	 * <li>Si uno de los parametros es inferior a 0 no se calculará.</li>
 	 * 
 	 * @param num1  Numero real que es el primer factor
 	 * @param num2  Numero real que es el segundo factor
@@ -60,8 +52,6 @@ public class Clase3Producto {
 	}
 
 	/**
-	 * <li>La base no podrá ser inferior ni igual a 0</li>
-	 * <li>El exponente no podrá ser inferior ni igual a 0</li>
 	 * 
 	 * @param num1  Numero real que es la base
 	 * @param num2  Numero real que es el exponente

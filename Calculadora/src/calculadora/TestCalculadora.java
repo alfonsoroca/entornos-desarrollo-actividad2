@@ -26,7 +26,7 @@ public class TestCalculadora {
 		System.out.println(Clase1Suma.sumaNumReal(sumador1, sumador2,-15));
 		//acumular numeros sumandolos
 		
-		Clase1Suma.sumatorio();
+		System.out.println("el valor de los numeros agregados es : " + Clase1Suma.sumatorio());
 		
 		System.out.println("\n-----------  FIN PRUEBA cLASE1SUMA --------------\n");
 		//-----------  FIN PRUEBA cLASE1SUMA --------------
@@ -61,12 +61,16 @@ public class TestCalculadora {
 
 		// Prueba Clase3Producto
 		
+
 		System.out.println("\n" + "\n" + "Prueba multiplicarEntero:" + Clase3Producto.multiplicarEntero(-2, 4)  );
 		System.out.println("Prueba multiplicarDouble: " + Clase3Producto.multiplicarDouble(masInf, ent2));
 		System.out.println("Prueba multiplicar3: " + Clase3Producto.multiplicar3(real2, ent1, real1));
 		System.out.println("Prueba Potencia: " + Clase3Producto.potencia(1, 5));
 
 		// Prueba Clase2Resta
+
+		//Inicio pruebas Clase2Resta		
+
 		int int1 = 150000;
 		int int2 = 12356;
 		double double1 = 136531.536944;
@@ -74,6 +78,7 @@ public class TestCalculadora {
 		double double3 = 1323231.268944;
 
 		System.out.println("\n----- Inicio de las pruebas de la Clase2Resta -----\n");
+
 		System.out.println(
 				"\nPrueba del metodo restaNumReal con 2 parametros: " + Clase2Resta.restaNumReal(double1, double2));
 		System.out.println("\nPrueba del metodo restaNumEnt: " + Clase2Resta.restaNumEnt(int1, int2));
@@ -82,7 +87,25 @@ public class TestCalculadora {
 		System.out.println("\nPrueba del metodo acumular-----");
 		System.out.println("\nHas pulsado el 0 y has salido del acumulador. El total acumulado asciende a: "
 				+ Clase2Resta.acumular());
+
+		
+		//Prueba del método restaNumReal con 2 par�metros
+		System.out.println("\nPrueba del método restaNumReal con 2 parámetros: " + Clase2Resta.restaNumReal(double1, double2));
+		
+		//Prueba del método restaNumEnt
+		System.out.println("\nPrueba del método restaNumEnt: " + Clase2Resta.restaNumEnt(int1, int2));
+		
+		//Prueba del método restaNumReal con 3 par�metros
+		System.out.println("\nPrueba del método restaNumReal con 3 parámetros: " + Clase2Resta.restaNumReal(double1, double2, double3));
+		
+		//Prueba del método acumular
+		System.out.println("\nPrueba del método acumular-----");
+
+		System.out.println("\nHas pulsado el 0 y has salido del acumulador. El total acumulado asciende a: " + Clase2Resta.acumular());
+
 		System.out.println("\n----- Fin de las pruebas de la Clase2Resta -----\n");
+		
+		//Fin pruebas Clase2Resta
 	}
 
 }
