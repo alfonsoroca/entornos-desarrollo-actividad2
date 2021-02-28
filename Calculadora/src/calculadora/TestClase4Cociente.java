@@ -103,7 +103,6 @@ class TestClase4Cociente {
 	 * Test Raiz cuadrada
 	 */
 
-	// Failure
 	@Test
 	void testRaizCuadrada() {
 		double obtenido = Clase4Cociente.raizCuadrada(2.5);
