@@ -37,7 +37,7 @@ class TestClase4Cociente {
 		assertEquals(obtenido, esperado);
 	}
 
-	// Salta el mensaje pero en el test sale error ( Failure) .
+
 	@Test
 	void testDivisionRealesDivisor0() {
 
@@ -72,7 +72,7 @@ class TestClase4Cociente {
 	}
 
 	/*
-	 * Teste Inverso
+	 * Test Inverso
 	 */
 	@Test
 	void testInverso() {
@@ -108,7 +108,7 @@ class TestClase4Cociente {
 	@Test
 	void testRaizCuadrada() {
 		double obtenido = Clase4Cociente.raizCuadrada(2.5);
-		double esperado = 1.58113883008419;
+		double esperado = 1.5811388300841898;
 		assertEquals(obtenido, esperado);
 	}
 	
