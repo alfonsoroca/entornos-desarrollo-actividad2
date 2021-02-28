@@ -13,7 +13,7 @@ import java.util.Scanner;
  * <br>
  * Especificiaciones
  * <ul>
- * <li>Cualquier número entero o real al que se le resta +infinito da como resultado +infinito</li>
+ * <li>Cualquier número entero o real al que se le resta +infinito da como resultado -infinito</li>
  * <li>Cualquier número entero o real al que se le resta -infinito da como resultado +infinito</li>
  * <li>Cuando el minuendo es +infinito y se le resta cualquier número entero o real da como resultado +infinito</li>
  * <li>Cuando el minuendo es -infinito y se le resta cualquier número entero o real da como resultado -infinito</li>

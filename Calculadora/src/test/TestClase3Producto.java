@@ -1,8 +1,10 @@
-package calculadora;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import calculadora.Clase3Producto;
 
 /**
  * Clase que testea la clase Clase3Producto y sus diferentes métodos
