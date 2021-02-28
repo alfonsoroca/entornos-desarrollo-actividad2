@@ -1,5 +1,5 @@
 #Exclude all except Calculadora/src
-/*
-!/Calculadora
-/Calculadora/*
-!/Calculadora/src
+*
+!Calculadora
+Calculadora/*
+!Calculadora/src
