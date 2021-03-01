@@ -79,7 +79,7 @@ public class Clase1Suma {
 		//pedimos un valor por teclado y entra en el bucle siempre que no sea 0
 		System.out.println("Inserta numeros para realizar una suma acumulativa. \n Si introduces 0 acabara, para indicar decimales utilizar ','\n");
 		Scanner sc= new Scanner(System.in);
-			acumulado = sc.nextDouble();
+			acumulado = sumador = sc.nextDouble();
 		//mientras el valor añadido no sea 0, se ejecuta el bucle añadiendo todos los valores introducicos
 		while(sumador != 0) {
 			System.out.println("Siguiente valor. \nRecuerda: si introduces 0 acabara y ',' para decimales\n");
