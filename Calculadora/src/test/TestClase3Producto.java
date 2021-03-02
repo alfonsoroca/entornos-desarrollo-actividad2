@@ -107,32 +107,6 @@ class TestClase3Producto {
 
 	@Test
 	/*
-	 * Comprobando la multiplicación de Double.MIN_VALUE por otro número positivo
-	 */
-	void testMultiplicarDoubleMIN_VALUENumeroPositivo() {
-
-		double res = Clase3Producto.multiplicarDouble(Double.MIN_VALUE, 5);
-		double resEsperado = Double.NEGATIVE_INFINITY;
-		assertEquals(resEsperado, res,
-				"El resultado de la multiplicación de Double.MIN_VALUE por otro número positivo falla");
-
-	}
-
-	@Test
-	/*
-	 * Comprobando la multiplicación de Double.MIN_VALUE por otro número negativo
-	 */
-	void testMultiplicarDoubleMIN_VALUENumeroNegativo() {
-
-		double res = Clase3Producto.multiplicarDouble(Double.MIN_VALUE, -5);
-		double resEsperado = Double.POSITIVE_INFINITY;
-		assertEquals(resEsperado, res,
-				"El resultado de la multiplicación de Double.MIN_VALUE por otro número negativo falla");
-
-	}
-
-	@Test
-	/*
 	 * Comprobando la potencia de cero elevado a infinito positivo
 	 */
 	void testPotenciaCeroElevadoInfinitoPositivo() {

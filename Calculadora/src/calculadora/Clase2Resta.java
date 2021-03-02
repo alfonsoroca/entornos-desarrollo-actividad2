@@ -30,8 +30,8 @@ import java.util.Scanner;
  * <li>Cuando el minuendo es -infinito y se le resta +infinito da como resultado
  * -infinito</li>
  * <li>Cuando el resultado de las operaciones de cualquier método excede el
- * valor máximo admitido por el tipo de dato, aparece un mensaje de aviso y se
- * retorna el valor máximo admitido por el tipo de dato</li>
+ * valor máximo/mínimo admitido por el tipo de dato, aparece un mensaje de aviso
+ * y se retorna el valor máximo/mínimo admitido por el tipo de dato</li>
  * </ul>
  * 
  * @author Alfonso
@@ -46,7 +46,31 @@ public class Clase2Resta {
 	 * @param a Número real correspondiente con el minuendo
 	 * @param b Número real correspondiente con el sustraendo
 	 * @return Retorna un {@code double} con el valor de la resta de los números
-	 *         introducidos según la fórmula: a - b
+	 *         introducidos según la fórmula: a - b <br>
+	 *         <br> 
+	 *         Casos especiales
+	 *         <ul>
+	 *         <li>Cualquier número entero o real al que se le resta +infinito da
+	 *         como resultado -infinito</li>
+	 *         <li>Cualquier número entero o real al que se le resta -infinito da
+	 *         como resultado +infinito</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta cualquier número
+	 *         entero o real da como resultado +infinito</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta cualquier número
+	 *         entero o real da como resultado -infinito</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta +infinito da como
+	 *         resultado NaN</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta -infinito da como
+	 *         resultado NaN</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta -infinito da como
+	 *         resultado +infinito</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta +infinito da como
+	 *         resultado -infinito</li>
+	 *         <li>Cuando el resultado de las operaciones de cualquier método excede
+	 *         el valor máximo/mínimo admitido por el tipo de dato, aparece un
+	 *         mensaje de aviso y se retorna el valor máximo/mínimo admitido por el
+	 *         tipo de dato</li>
+	 *         </ul>
 	 */
 
 	public static double restaNumReal(double a, double b) {
@@ -59,9 +83,9 @@ public class Clase2Resta {
 			System.out.println("Error producido por superar el valor máximo permitido:");
 			return Double.MAX_VALUE;
 
-		} else if (resultado < Double.MIN_VALUE) {
+		} else if (resultado < -Double.MAX_VALUE) {
 			System.out.println("Error producido por superar el valor mínimo permitido:");
-			return Double.MIN_VALUE;
+			return -Double.MAX_VALUE;
 
 		} else
 			return (double) resultado;
@@ -73,7 +97,31 @@ public class Clase2Resta {
 	 * @param a Número entero correspondiente con el minuendo
 	 * @param b Número entero correspondiente con el sustraendo
 	 * @return Retorna un {@code int} con el valor de la resta de los dos números
-	 *         introducidos según la fórmula: a - b
+	 *         introducidos según la fórmula: a - b <br>
+	 *         <br> 
+	 *         Casos especiales
+	 *         <ul>
+	 *         <li>Cualquier número entero o real al que se le resta +infinito da
+	 *         como resultado -infinito</li>
+	 *         <li>Cualquier número entero o real al que se le resta -infinito da
+	 *         como resultado +infinito</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta cualquier número
+	 *         entero o real da como resultado +infinito</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta cualquier número
+	 *         entero o real da como resultado -infinito</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta +infinito da como
+	 *         resultado NaN</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta -infinito da como
+	 *         resultado NaN</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta -infinito da como
+	 *         resultado +infinito</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta +infinito da como
+	 *         resultado -infinito</li>
+	 *         <li>Cuando el resultado de las operaciones de cualquier método excede
+	 *         el valor máximo/mínimo admitido por el tipo de dato, aparece un
+	 *         mensaje de aviso y se retorna el valor máximo/mínimo admitido por el
+	 *         tipo de dato</li>
+	 *         </ul>
 	 */
 
 	public static int restaNumEnt(int a, int b) {
@@ -101,7 +149,31 @@ public class Clase2Resta {
 	 * @param b Número real correspondiente con el primer sustraendo
 	 * @param c Número real correspondiente con el segundo sustraendo
 	 * @return Retorna un {@code double} con el valor de la resta de los tres
-	 *         números introducidos según la fórmula: (a - b) - c
+	 *         números introducidos según la fórmula: (a - b) - c <br>
+	 *         <br> 
+	 *         Casos especiales
+	 *         <ul>
+	 *         <li>Cualquier número entero o real al que se le resta +infinito da
+	 *         como resultado -infinito</li>
+	 *         <li>Cualquier número entero o real al que se le resta -infinito da
+	 *         como resultado +infinito</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta cualquier número
+	 *         entero o real da como resultado +infinito</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta cualquier número
+	 *         entero o real da como resultado -infinito</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta +infinito da como
+	 *         resultado NaN</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta -infinito da como
+	 *         resultado NaN</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta -infinito da como
+	 *         resultado +infinito</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta +infinito da como
+	 *         resultado -infinito</li>
+	 *         <li>Cuando el resultado de las operaciones de cualquier método excede
+	 *         el valor máximo/mínimo admitido por el tipo de dato, aparece un
+	 *         mensaje de aviso y se retorna el valor máximo/mínimo admitido por el
+	 *         tipo de dato</li>
+	 *         </ul>
 	 */
 
 	public static double restaNumReal(double a, double b, double c) {
@@ -115,9 +187,9 @@ public class Clase2Resta {
 			System.out.println("Error producido por superar el valor máximo permitido:");
 			return Double.MAX_VALUE;
 
-		} else if (resultado < Double.MIN_VALUE) {
+		} else if (resultado < -Double.MAX_VALUE) {
 			System.out.println("Error producido por superar el valor mínimo permitido:");
-			return Double.MIN_VALUE;
+			return -Double.MAX_VALUE;
 
 		} else
 			return (double) resultado;
@@ -134,7 +206,31 @@ public class Clase2Resta {
 	 * (ej. 12345,6485)
 	 * 
 	 * @return Retorna un {@code double} con el valor acumulado de todos los números
-	 *         introducidos
+	 *         introducidos <br>
+	 *         <br> 
+	 *         Casos especiales
+	 *         <ul>
+	 *         <li>Cualquier número entero o real al que se le resta +infinito da
+	 *         como resultado -infinito</li>
+	 *         <li>Cualquier número entero o real al que se le resta -infinito da
+	 *         como resultado +infinito</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta cualquier número
+	 *         entero o real da como resultado +infinito</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta cualquier número
+	 *         entero o real da como resultado -infinito</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta +infinito da como
+	 *         resultado NaN</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta -infinito da como
+	 *         resultado NaN</li>
+	 *         <li>Cuando el minuendo es +infinito y se le resta -infinito da como
+	 *         resultado +infinito</li>
+	 *         <li>Cuando el minuendo es -infinito y se le resta +infinito da como
+	 *         resultado -infinito</li>
+	 *         <li>Cuando el resultado de las operaciones de cualquier método excede
+	 *         el valor máximo/mínimo admitido por el tipo de dato, aparece un
+	 *         mensaje de aviso y se retorna el valor máximo/mínimo admitido por el
+	 *         tipo de dato</li>
+	 *         </ul>
 	 */
 
 	public static double acumular() {
@@ -161,9 +257,9 @@ public class Clase2Resta {
 			System.out.println("Error producido por superar el valor máximo permitido:");
 			return Double.MAX_VALUE;
 
-		} else if (acumulado < Double.MIN_VALUE) {
+		} else if (acumulado < -Double.MAX_VALUE) {
 			System.out.println("Error producido por superar el valor mínimo permitido:");
-			return Double.MIN_VALUE;
+			return -Double.MAX_VALUE;
 
 		} else
 			return (double) acumulado;
