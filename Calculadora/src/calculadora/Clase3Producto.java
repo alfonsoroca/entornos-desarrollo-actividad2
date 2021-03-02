@@ -1,4 +1,4 @@
-package Calculadora.src.calculadora;
+package calculadora;
 
 /**
  * 
