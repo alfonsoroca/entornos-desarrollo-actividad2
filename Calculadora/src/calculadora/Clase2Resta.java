@@ -11,16 +11,27 @@ import java.util.Scanner;
  * <li>Resta recurrente</li>
  * </ul>
  * <br>
- * Especificiaciones
+ * Casos especiales
  * <ul>
- * <li>Cualquier número entero o real al que se le resta +infinito da como resultado -infinito</li>
- * <li>Cualquier número entero o real al que se le resta -infinito da como resultado +infinito</li>
- * <li>Cuando el minuendo es +infinito y se le resta cualquier número entero o real da como resultado +infinito</li>
- * <li>Cuando el minuendo es -infinito y se le resta cualquier número entero o real da como resultado -infinito</li>
- * <li>Cuando el minuendo es +infinito y se le resta +infinito da como resultado NaN</li>
- * <li>Cuando el minuendo es -infinito y se le resta -infinito da como resultado NaN</li>
- * <li>Cuando el minuendo es +infinito y se le resta -infinito da como resultado +infinito</li>
- * <li>Cuando el minuendo es -infinito y se le resta +infinito da como resultado -infinito</li>
+ * <li>Cualquier número entero o real al que se le resta +infinito da como
+ * resultado -infinito</li>
+ * <li>Cualquier número entero o real al que se le resta -infinito da como
+ * resultado +infinito</li>
+ * <li>Cuando el minuendo es +infinito y se le resta cualquier número entero o
+ * real da como resultado +infinito</li>
+ * <li>Cuando el minuendo es -infinito y se le resta cualquier número entero o
+ * real da como resultado -infinito</li>
+ * <li>Cuando el minuendo es +infinito y se le resta +infinito da como resultado
+ * NaN</li>
+ * <li>Cuando el minuendo es -infinito y se le resta -infinito da como resultado
+ * NaN</li>
+ * <li>Cuando el minuendo es +infinito y se le resta -infinito da como resultado
+ * +infinito</li>
+ * <li>Cuando el minuendo es -infinito y se le resta +infinito da como resultado
+ * -infinito</li>
+ * <li>Cuando el resultado de las operaciones de cualquier método excede el
+ * valor máximo admitido por el tipo de dato, aparece un mensaje de aviso y se
+ * retorna el valor máximo admitido por el tipo de dato</li>
  * </ul>
  * 
  * @author Alfonso
@@ -39,10 +50,21 @@ public class Clase2Resta {
 	 */
 
 	public static double restaNumReal(double a, double b) {
-		double min = a;
-		double sust = b;
+		// Utilizamos tipos float para controlar el overflow
+		float min = (float) a;
+		float sust1 = (float) b;
+		float resultado = min - sust1;
 
-		return min - sust;
+		if (resultado > Double.MAX_VALUE) {
+			System.out.println("Error producido por superar el valor máximo permitido:");
+			return Double.MAX_VALUE;
+
+		} else if (resultado < Double.MIN_VALUE) {
+			System.out.println("Error producido por superar el valor mínimo permitido:");
+			return Double.MIN_VALUE;
+
+		} else
+			return (double) resultado;
 	}
 
 	/**
@@ -55,10 +77,21 @@ public class Clase2Resta {
 	 */
 
 	public static int restaNumEnt(int a, int b) {
-		int min = a;
-		int sust = b;
+		// Utilizamos tipos long para controlar el overflow
+		long min = (long) a;
+		long sust = (long) b;
+		long resultado = min - sust;
 
-		return min - sust;
+		if (resultado > Integer.MAX_VALUE) {
+			System.out.println("Error producido por superar el valor máximo permitido:");
+			return Integer.MAX_VALUE;
+
+		} else if (resultado < Integer.MIN_VALUE) {
+			System.out.println("Error producido por superar el valor mínimo permitido:");
+			return Integer.MIN_VALUE;
+
+		} else
+			return (int) resultado;
 	}
 
 	/**
@@ -72,11 +105,22 @@ public class Clase2Resta {
 	 */
 
 	public static double restaNumReal(double a, double b, double c) {
-		double min = a;
-		double sust1 = b;
-		double sust2 = c;
+		// Utilizamos tipos float para controlar el overflow
+		float min = (float) a;
+		float sust1 = (float) b;
+		float sust2 = (float) c;
+		float resultado = (min - sust1) - sust2;
 
-		return (min - sust1) - sust2;
+		if (resultado > Double.MAX_VALUE) {
+			System.out.println("Error producido por superar el valor máximo permitido:");
+			return Double.MAX_VALUE;
+
+		} else if (resultado < Double.MIN_VALUE) {
+			System.out.println("Error producido por superar el valor mínimo permitido:");
+			return Double.MIN_VALUE;
+
+		} else
+			return (double) resultado;
 	}
 
 	/**
@@ -95,24 +139,34 @@ public class Clase2Resta {
 
 	public static double acumular() {
 		Scanner sc = new Scanner(System.in);
-		double numero = 0;
-		double acumulado = 0;
+		// Utilizamos tipos float para controlar el overflow
+		float numero = 0;
+		float acumulado = 0;
 
 		System.out.println(
 				"Introduce el primer número que quieres añadir al acumulador (el carácter decimal es la coma).....");
-		numero = sc.nextDouble();
+		numero = sc.nextFloat();
 		acumulado += numero;
 
 		while (numero != 0) {
 			System.out.println(
-					"Introduce otro número (el carácter decimal es la coma) para sumar o restar (resta con signo - delante) al acumulador, si quieres salir introduce el 0....");
-			numero = sc.nextDouble();
+					"Introduce otro número (el carácter decimal es la coma) para sumar o restar (resta con signo - delante) al acumulador, si quieres salir introduce el 0 y te mostré el valor acumulado....");
+			numero = sc.nextFloat();
 			acumulado += numero;
 		}
 
 		sc.close();
 
-		return acumulado;
+		if (acumulado > Double.MAX_VALUE) {
+			System.out.println("Error producido por superar el valor máximo permitido:");
+			return Double.MAX_VALUE;
+
+		} else if (acumulado < Double.MIN_VALUE) {
+			System.out.println("Error producido por superar el valor mínimo permitido:");
+			return Double.MIN_VALUE;
+
+		} else
+			return (double) acumulado;
 
 	}
 
