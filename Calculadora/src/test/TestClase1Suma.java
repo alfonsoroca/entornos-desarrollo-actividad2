@@ -13,36 +13,115 @@ import org.junit.jupiter.api.Test;
 
 import calculadora.Clase1Suma;
 
-class Clase1SumaTest {
+/**
+ * Clase que testea la clase Clase1Suma y sus diferentes métodos
+ * 
+ * @author Jorge
+ *
+ */
+class TestClase1Suma {
 
+	/*******************************************
+	 * Pruebas sobre Clase1Suma.sumaNumReal(d,d)
+	 *******************************************/
+	
+	// Caso Normal de suma de 2 números reales
 	@Test
-	void testSumaNumReal1() {
+	void testSumaNumRealCasoNormal() {
 		double resultado = Clase1Suma.sumaNumReal(12345.67, 76543.21);
 		double resultadoEsperado = 88888.88;
 		assertEquals(resultado, resultadoEsperado, 0.01);
 	}
 	
+	// Caso Resultado Infinito Positivo
 	@Test
-	void testSumaNumRealInfinito() {
+	void testSumaNumRealInfinitoPositivo() {
 		double resultado = Clase1Suma.sumaNumReal(1, Double.POSITIVE_INFINITY);
 		double resultadoEsperado = Double.POSITIVE_INFINITY;
-		assertEquals(resultado, resultadoEsperado, 0.01);
+		assertEquals(resultado, resultadoEsperado);
+	}
+	
+	// Caso Resultado Infinito Negativo
+	@Test
+	void testSumaNumRealInfinitoNegativo() {
+		double resultado = Clase1Suma.sumaNumReal(-1, Double.NEGATIVE_INFINITY);
+		double resultadoEsperado = Double.NEGATIVE_INFINITY;
+		assertEquals(resultado, resultadoEsperado);
 	}
 
+	// Caso Resultado NaN
 	@Test
-	void testSumaNumEnt1() {
+	void testSumaNumRealNaN() {
+		double resultado = Clase1Suma.sumaNumReal(1, Double.NaN);
+		double resultadoEsperado = Double.NaN;
+		assertEquals(resultado, resultadoEsperado);
+	}
+	
+	/******************************************
+	 * Pruebas sobre Clase1Suma.sumaNumEnt(i,i)
+	 ******************************************/
+	// Caso Normal de suma de 2 enteros
+	@Test
+	void testSumaNumEntCasoNormal() {
 		int resultado = Clase1Suma.sumaNumEnt(1234567, 7654321);
 		int resultadoEsperado = 8888888;
-		assertEquals(resultado, resultadoEsperado, 0);
+		assertEquals(resultado, resultadoEsperado);
 	}
-
+	
+	// Caso Resultado mayor que Integer.MAX_VALUE
 	@Test
-	void testSumaNumRealTresSumadosInfinito() {
-		double resultado = Clase1Suma.sumaNumReal(1, 1, Double.POSITIVE_INFINITY);
-		double resultadoEsperado = Double.POSITIVE_INFINITY;
+	void testSumaNumEntInfinitoPositivo() {
+		int resultado = Clase1Suma.sumaNumEnt(1, Integer.MAX_VALUE);
+		int resultadoEsperado = Integer.MAX_VALUE;
+		assertEquals(resultado, resultadoEsperado);
+	}
+	
+	// Caso Resultado menor que Integer.MIN_VALUE
+	@Test
+	void testSumaNumEntInfinitoNegativo() {
+		int resultado = Clase1Suma.sumaNumEnt(-1, Integer.MIN_VALUE);
+		int resultadoEsperado = Integer.MIN_VALUE;
+		assertEquals(resultado, resultadoEsperado);
+	}
+	
+	/*********************************************
+	 * Pruebas sobre Clase1Suma.sumaNumReal(d,d,d)
+	 *********************************************/
+	// Caso Normal de suma de 2 números reales
+	@Test
+	void testSumaNumRealTresSumandosCasoNormal() {
+		double resultado = Clase1Suma.sumaNumReal(11111.111, 22222.222, 33333.333);
+		double resultadoEsperado = 66666.66;
 		assertEquals(resultado, resultadoEsperado, 0.01);
 	}
+	
+	// Caso Resultado Infinito Positivo
+	@Test
+	void testSumaNumRealTresSumandosInfinitoPositivo() {
+		double resultado = Clase1Suma.sumaNumReal(1, Double.POSITIVE_INFINITY, 1);
+		double resultadoEsperado = Double.POSITIVE_INFINITY;
+		assertEquals(resultado, resultadoEsperado);
+	}
+	
+	// Caso Resultado Infinito Negativo
+	@Test
+	void testSumaNumRealTresSumandosInfinitoNegativo() {
+		double resultado = Clase1Suma.sumaNumReal(-1, Double.NEGATIVE_INFINITY, -1);
+		double resultadoEsperado = Double.NEGATIVE_INFINITY;
+		assertEquals(resultado, resultadoEsperado);
+	}
 
+	// Caso Resultado NaN
+	@Test
+	void testSumaNumRealTresSumandosNaN() {
+		double resultado = Clase1Suma.sumaNumReal(1, Double.NaN, 0);
+		double resultadoEsperado = Double.NaN;
+		assertEquals(resultado, resultadoEsperado);
+	}
+	
+	/**************************************
+	 * Pruebas sobre Clase1Suma.sumatorio()
+	 **************************************/
 	@Test
 	void testSumatorio() throws IOException {
 		double resultado=0;
