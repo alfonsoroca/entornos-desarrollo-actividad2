@@ -2,6 +2,11 @@ package calculadora;
 
 /**
  * La clase {@code Clase4Cociente} implementa cuatro métodos relacionados con la división de números
+ * 
+ * Los métodos que implementa son {@link #divisionReales(double, double) divisionReales}, 
+ * {@link #divisionEnteros(double, double) divisionEnteros}, {@link #inverso(double) inverso} y
+ * {@link #raizCuadrada(double) raizCuadrada}.
+ * Todos los métodos son {@code static}.
  * @author JSAlor
  * @version 1.0 
  */
