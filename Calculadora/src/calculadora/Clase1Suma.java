@@ -2,34 +2,38 @@ package calculadora;
 
 import java.util.Scanner;
 
-// Esta clase es la que dejamos abandonada por ser 3 participantes en el grupo
-
 /**
- * Esta clase permite realizar diferentes operaciones de suma:
+ * <li>Esta clase permite realizar diferentes operaciones de tipo suma:</li>
  * <ul>
- * <li>Suma de dos n�meros reales</li>
- * <li>Suma de dos n�meros enteros</li>
- * <li>Suma de tres n�meros reales</li>
+ * <li>Suma de dos números reales</li>
+ * <li>Suma de dos números enteros</li>
+ * <li>Suma de tres números reales</li>
  * <li>Suma acumulativa</li>
  * </ul>
+ * 
+ * <li> Casos Especiales </li>
+ * <ul>
+ * <li>Cualquier número entero o real al que se le suma +infinito da como resultado +infinito</li>
+ * <li>Cualquier número entero o real al que se le suma -infinito da como resultado -infinito</li>
+ * <li>Cualquier suma empleando en los sumandos valores de +infinito y -infinito dan como resultado un valor NaN </li>
+ * 
+ * </ul>
  * <br>
- * <b>ATENCI�N:</b> No se pueden usar n�meros negativos en las operaciones
+ * <b>ATENCIóN:</b> Para operar con números decimales usar la ","!!
  * 
  * @author Alfonso, Estanislao, Rafael
  * @since 24/01/2021
  * 
- * Clase realizada por @Rafa tras la unificacion de grupos
+ * Clase realizada por @Rafa tras la unificación de grupos
  */
 
 public class Clase1Suma {
 
 	/**
 	 * M�todo que retorna la suma de dos n�meros reales.
-	 * <br><br><b>Atenci�n:</b> No se pueden usar n�meros negativos en las operaciones
-	 * @param sum1 N�mero real correspondiente con el primer sumando
-	 * @param sum2 N�mero real correspondiente con el segundo sumando
-	 * @return Retorna la suma de los dos sumandos introducidos seg�n la f�rmula: sum1 + sum2
-	 *  
+	 * @param sum1 Número real correspondiente con el primer sumando
+	 * @param sum2 Número real correspondiente con el segundo sumando
+	 * @return Retorna la suma de los dos sumandos introducidos según la fórmula: sum1 + sum2 
 	 */
 
 	public static double sumaNumReal(double sum1, double sum2) {
@@ -38,12 +42,10 @@ public class Clase1Suma {
 	}
 
 	/**
-	 * M�todo que retorna la suma de dos n�meros enteros.
-	 * <br><br><b>Atenci�n:</b> No se pueden usar n�meros negativos en las operaciones
-	 * @param sum1 N�mero entero correspondiente con el primer sumando
-	 * @param sum2 N�mero entero correspondiente con el segundo sumando
-	 * @return Retorna la suma de los dos sumandos introducidos seg�n la f�rmula: sum1 + sum2
-	 * 
+	 * Método que retorna la suma de dos números enteros.
+	 * @param sum1 Número entero correspondiente con el primer sumando
+	 * @param sum2 Número entero correspondiente con el segundo sumando
+	 * @return Retorna la suma de los dos sumandos introducidos según la fórmula: sum1 + sum2
 	 */
 
 	public static int sumaNumEnt(int sum1, int sum2) {
@@ -52,13 +54,11 @@ public class Clase1Suma {
 	}
 
 	/**
-	 * M�todo que retorna la suma de tres n�meros reales.
-	 * <br><br><b>Atenci�n:</b> No se pueden usar n�meros negativos en las operaciones 
-	 * @param sum1 N�mero real correspondiente con el primer sumando
-	 * @param sum2 N�mero real correspondiente con el segundo sumando
-	 * @param sum3 N�mero real correspondiente con el tercer sumando
-	 * @return Retorna la suma de los tres sumandos introducidos seg�n la f�rmula: sum1 + sum2 + sum3
-	 * 
+	 * Método que retorna la suma de tres números reales.
+	 * @param sum1 Número real correspondiente con el primer sumando
+	 * @param sum2 Número real correspondiente con el segundo sumando
+	 * @param sum3 Número real correspondiente con el tercer sumando
+	 * @return Retorna la suma de los tres sumandos introducidos según la fórmula: sum1 + sum2 + sum3
 	 */
 
 	public static double sumaNumReal(double sum1, double sum2, double sum3) {
@@ -67,10 +67,8 @@ public class Clase1Suma {
 	}
 	
 	/**
-	 * M�todo para sumar acumulativamente diferentes n�meros reales
-	 * <br><br><b>Atenci�n:</b> No se pueden usar n�meros negativos en las operaciones
-	 * @param num N�mero real que se quiere a�adir al sumatorio
-	 * 
+	 * Método para sumar acumulativamente diferentes números reales
+	 * @param num Número real que se quiere añadir al sumatorio
 	 */
 
 	public static double sumatorio() {
@@ -89,7 +87,6 @@ public class Clase1Suma {
 		
 		}
 		//retorna el valor del valor acumuado
-		//valor.close();
 		sc.close();
 		return acumulado;
 		
