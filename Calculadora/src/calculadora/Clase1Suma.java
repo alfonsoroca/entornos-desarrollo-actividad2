@@ -18,8 +18,6 @@ import java.util.Scanner;
  * <li>Cualquier suma empleando en los sumandos valores de +infinito y -infinito dan como resultado un valor NaN </li>
  * </ul>
  * <br>
- * <b>ATENCIóN:</b> Para operar con números decimales usar la ","!!<p>
- * <b>ATENCIÓN</b> No emplear numeros negativos para realizar los calculos!!!<p>
  * 
  * @author Alfonso, Estanislao, Rafael
  * @since 24/01/2021
@@ -28,6 +26,7 @@ import java.util.Scanner;
  */
 
 public class Clase1Suma {
+	static double acumulador = 0;
 
 	/**
 	 * <b>Método sumaNumReal</b> que retorna la suma de dos números reales.
@@ -37,38 +36,33 @@ public class Clase1Suma {
 	 * @return Retorna la suma de los dos sumandos introducidos según la fórmula:
 	 *         sum1 + sum2
 	 *         <ul>
-	 *         <li><b>ATENCIóN:</b> Para operar con números decimales usar la
-	 *         ","!!</li>
-	 *         <li><b>ATENCIÓN</b> No emplear <b>números negativos</b> para realizar
-	 *         los calculos!!!</li>
-	 *         </ul>
-	 *         <ul>
 	 *         <li>Cualquier número entero o real al que se le suma +infinito da
 	 *         como resultado +infinito</li>
 	 *         <li>Cualquier número entero o real al que se le suma -infinito da
 	 *         como resultado -infinito</li>
 	 *         <li>Cualquier suma empleando en los sumandos valores de +infinito y
 	 *         -infinito dan como resultado un valor NaN</li>
+	 *         <li>Si cualquiera de los sumandos en NaN. el resultado será NaN</li>
 	 *         </ul>
 	 * 
 	 */
 
 	public static double sumaNumReal(double sum1, double sum2) {
 		// Utilizamos tipos float para controlar el overflow
-		float sumador1 = (float) sum1;
-		float sumador2 = (float) sum2;
-		float resultado = sumador1 + sumador2;
+		double sumador1 = sum1;
+		double sumador2 = sum2;
+		double resultado = sumador1 + sumador2;
 
 		if (resultado > Double.MAX_VALUE) {
 			System.out.println("Error producido por superar el valor máximo permitido:");
-			return Double.MAX_VALUE;
+			return Double.POSITIVE_INFINITY;
 
 		} else if (resultado < -Double.MAX_VALUE) {
 			System.out.println("Error producido por superar el valor mínimo permitido:");
-			return -Double.MAX_VALUE;
+			return Double.NEGATIVE_INFINITY;
 
 		} else {
-			return (double) resultado;
+			return resultado;
 		}
 
 	}
@@ -81,34 +75,28 @@ public class Clase1Suma {
 	 * @param sum2 Número entero correspondiente con el segundo sumando
 	 * @return Retorna la suma de los dos sumandos introducidos según la fórmula: sum1 + sum2
 	 * 
-	 * 	       <ul>
-	 *         <li><b>ATENCIÓN</b> No emplear <b>números negativos</b> para realizar
-	 *         los calculos!!!</li>
-	 *         </ul>
 	 *         <ul>
-	 *         <li>Cualquier número entero o real al que se le suma +infinito da
-	 *         como resultado +infinito</li>
-	 *         <li>Cualquier número entero o real al que se le suma -infinito da
-	 *         como resultado -infinito</li>
-	 *         <li>Cualquier suma empleando en los sumandos valores de +infinito y
-	 *         -infinito dan como resultado un valor NaN</li>
+	 *         <li>Si el resultado es mayor que {@value Integer#MAX_VALUE}, 
+	 *         devolverá {@value Integer#MAX_VALUE}</li>
+	 *         <li>Si el resultado es menor que {@value Integer#MIN_VALUE}, 
+	 *         devolverá {@value Integer#MIN_VALUE}</li>
 	 *         </ul>
 	 */
 
 	public static int sumaNumEnt(int sum1, int sum2) {
 
-		// Utilizamos tipos float para controlar el overflow
-		float sumador1 = (float) sum1;
-		float sumador2 = (float) sum2;
-		float resultado = sumador1 + sumador2;
+		// Utilizamos tipos Long para controlar el overflow de los int
+		long sumador1 = (long) sum1;
+		long sumador2 = (long) sum2;
+		long resultado = sumador1 + sumador2;
 
-		if (resultado > Double.MAX_VALUE) {
+		if (resultado > Integer.MAX_VALUE) {
 			System.out.println("Error producido por superar el valor máximo permitido:");
-			return (int) Double.MAX_VALUE;
+			return Integer.MAX_VALUE;
 
-		} else if (resultado < -Double.MAX_VALUE) {
+		} else if (resultado < -Integer.MIN_VALUE) {
 			System.out.println("Error producido por superar el valor mínimo permitido:");
-			return (int) -Double.MAX_VALUE;
+			return (int) Integer.MIN_VALUE;
 
 		} else
 			return (int) resultado;
@@ -124,18 +112,13 @@ public class Clase1Suma {
 	 *         sum1 + sum2 + sum3
 	 * 
 	 *         <ul>
-	 *         <li><b>ATENCIóN:</b> Para operar con números decimales usar la
-	 *         ","!!</li>
-	 *         <li><b>ATENCIÓN</b> No emplear <b>números negativos</b> para realizar
-	 *         los calculos!!!</li>
-	 *         </ul>
-	 *         <ul>
 	 *         <li>Cualquier número entero o real al que se le suma +infinito da
 	 *         como resultado +infinito</li>
 	 *         <li>Cualquier número entero o real al que se le suma -infinito da
 	 *         como resultado -infinito</li>
 	 *         <li>Cualquier suma empleando en los sumandos valores de +infinito y
 	 *         -infinito dan como resultado un valor NaN</li>
+	 *         <li>Si cualquiera de los sumandos en NaN. el resultado será NaN</li>
 	 *         </ul>
 	 */
 
@@ -148,11 +131,11 @@ public class Clase1Suma {
 
 				if (resultado > Double.MAX_VALUE) {
 					System.out.println("Error producido por superar el valor máximo permitido:");
-					return Double.MAX_VALUE;
+					return Double.POSITIVE_INFINITY;
 
 				} else if (resultado < -Double.MAX_VALUE) {
 					System.out.println("Error producido por superar el valor mínimo permitido:");
-					return -Double.MAX_VALUE;
+					return Double.NEGATIVE_INFINITY;
 
 				} else
 					return (double) resultado;
@@ -164,47 +147,32 @@ public class Clase1Suma {
 	 * @param acumulador almacenamos el valor del sumatorio de todos los 
 	 * números introducidos
 	 *         <ul>
-	 *         <li><b>ATENCIóN:</b> Para operar con números decimales usar la
-	 *         ","!!</li>
-	 *         <li><b>ATENCIÓN</b> No emplear <b>números negativos</b> para realizar
-	 *         los calculos!!!</li>
-	 *         </ul>
-	 *         <ul>
 	 *         <li>Cualquier número entero o real al que se le suma +infinito da
 	 *         como resultado +infinito</li>
 	 *         <li>Cualquier número entero o real al que se le suma -infinito da
 	 *         como resultado -infinito</li>
 	 *         <li>Cualquier suma empleando en los sumandos valores de +infinito y
 	 *         -infinito dan como resultado un valor NaN</li>
-	 *         <li> Cualquier cálculo que supere el valor del MAX_VALUE y el MIN_VALUE dara mensaje de error y retornará el valos MAX/MIN_Value
 	 *         </ul>
 	 */
 
-	public static double sumatorio() {
-		double acumulado = 0;
-		double sumador = 0;
-		//pedimos un valor por teclado y entra en el bucle siempre que no sea 0
-		System.out.println("Inserta numeros para realizar una suma acumulativa. \n Si introduces 0 acabara, para indicar decimales utilizar ','\n");
-		Scanner sc= new Scanner(System.in);
-			acumulado = sumador = sc.nextDouble();
-		//mientras el valor añadido no sea 0, se ejecuta el bucle añadiendo todos los valores introducicos
-		while(sumador != 0) {
-			System.out.println("Siguiente valor. \nRecuerda: si introduces 0 acabara y ',' para decimales\n");
-			Scanner valor= new Scanner(System.in);
-				sumador = valor.nextDouble();
-				acumulado += sumador;
-		}
-		sc.close();
-		if (acumulado > Double.MAX_VALUE) {
-			System.out.println("Error producido por superar el valor máximo permitido:");
-			return Double.MAX_VALUE;
+	public static double sumatorio(double sumador) {
+		acumulador += sumador;
+		return acumulador;
+	}
 
-		} else if (acumulado < -Double.MAX_VALUE) {
-			System.out.println("Error producido por superar el valor mínimo permitido:");
-			return -Double.MAX_VALUE;
+	/**
+	 * Devuelve el valor actual del campo {@link Clase1Suma#acumulador}
+	 * @return El valor del campo {@link Clase1Suma#acumulador}
+	 */
+	public static double getAcumulador() {
+		return acumulador;
+	}
 
-		} else
-			//retorna el valor del valor acumuado
-			return (double) acumulado;		
+	/**
+	 * Pone el valor del campo {@link Clase1Suma#acumulador} a 0.
+	 */
+	public static void resetAcumulador() {
+		acumulador = 0;
 	}
 }

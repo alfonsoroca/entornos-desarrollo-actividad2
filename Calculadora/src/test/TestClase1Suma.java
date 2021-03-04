@@ -141,27 +141,30 @@ class TestClase1Suma {
 	/**************************************
 	 * Pruebas sobre Clase1Suma.sumatorio()
 	 **************************************/
+	
+	// Caso Acumula 4 números y recupera Acumulador
 	@Test
-	void testSumatorio() throws IOException {
+	void testSumatorio() {
 		double resultado=0;
-		double resultadoEsperado;
+		double sumatorio=0;
+		double resultadoEsperado=10;
 		double[] numeros = {1,2,3,4};
-		/*
-		InputStream sysInBackup = System.in; // backup System.in to restore it later
-		
-		ByteArrayOutputStream datos = new ByteArrayOutputStream();
-		DataOutputStream out = new DataOutputStream(datos);
-		for(int i=0;i<numeros.length;i++) {
-			out.writeDouble(numeros[i]);
+		for (int i=0;i<numeros.length;i++) {
+			sumatorio = Clase1Suma.sumatorio(numeros[i]);
 		}
-		InputStream input = new ByteArrayInputStream(datos.toByteArray());
-		System.setIn(input);
-		*/
-		resultado = Clase1Suma.sumatorio();
-		resultadoEsperado = 10;
-		//System.setIn(sysInBackup);
+		resultado = Clase1Suma.getAcumulador();
+		
 		assertEquals(resultado, resultadoEsperado, 0.01);
-
 	}
 
+	// Caso Poner a cero Acumulador
+	@Test
+	void testSumatorioPonerACero() {
+		double resultado;
+		double resultadoEsperado=0;
+		Clase1Suma.resetAcumulador();
+		resultado = Clase1Suma.getAcumulador();
+		
+		assertEquals(resultado, resultadoEsperado);
+	}
 }

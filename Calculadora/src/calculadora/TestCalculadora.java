@@ -25,8 +25,12 @@ public class TestCalculadora {
 		//sumar tres numeros reales
 		System.out.println(Clase1Suma.sumaNumReal(sumador1, sumador2,-15));
 		//acumular numeros sumandolos
+		double[] numeros = {1,2,3,4};
+		for (int i=0;i<numeros.length;i++) {
+			System.out.println("Acumulamos: "+ numeros[i] + ", Total Acumulado: " + 
+								Clase1Suma.sumatorio(numeros[i]));
+		}
 		
-		System.out.println("el valor de los numeros agregados es : " + Clase1Suma.sumatorio());
 		
 		System.out.println("\n-----------  FIN PRUEBA cLASE1SUMA --------------\n");
 		//-----------  FIN PRUEBA cLASE1SUMA --------------
