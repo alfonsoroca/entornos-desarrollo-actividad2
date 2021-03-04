@@ -33,7 +33,7 @@ class TestClase1Suma {
 		assertEquals(resultado, resultadoEsperado, 0.01);
 	}
 	
-	// Caso Resultado Infinito Positivo
+	// Caso Sumando Infinito Positivo, Resultado Infinito Positivo
 	@Test
 	void testSumaNumRealInfinitoPositivo() {
 		double resultado = Clase1Suma.sumaNumReal(1, Double.POSITIVE_INFINITY);
@@ -41,21 +41,30 @@ class TestClase1Suma {
 		assertEquals(resultado, resultadoEsperado);
 	}
 	
-	// Caso Resultado Infinito Negativo
+	// Caso Sumando Infinito Negativo, Resultado Infinito Negativo
 	@Test
 	void testSumaNumRealInfinitoNegativo() {
-		double resultado = Clase1Suma.sumaNumReal(-1, Double.NEGATIVE_INFINITY);
+		double resultado = Clase1Suma.sumaNumReal(1, Double.NEGATIVE_INFINITY);
 		double resultadoEsperado = Double.NEGATIVE_INFINITY;
 		assertEquals(resultado, resultadoEsperado);
 	}
 
-	// Caso Resultado NaN
+	// Caso Sumandos Infinto Positivo y Negativo, Resultado NaN
 	@Test
-	void testSumaNumRealNaN() {
-		double resultado = Clase1Suma.sumaNumReal(1, Double.NaN);
+	void testSumaNumRealInfinitoMenosInfinitoIgualNaN() {
+		double resultado = Clase1Suma.sumaNumReal(Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY);
 		double resultadoEsperado = Double.NaN;
 		assertEquals(resultado, resultadoEsperado);
 	}
+	
+	//Caso Sumando NaN, Resultado NaN
+	@Test
+	void testNumRealNaN() {
+		double resultado = Clase1Suma.sumaNumReal(Double.NaN, 1);
+		double resultadoEsperado = Double.NaN;
+		assertEquals(resultado, resultadoEsperado);
+	}
+	
 	
 	/******************************************
 	 * Pruebas sobre Clase1Suma.sumaNumEnt(i,i)
@@ -68,7 +77,7 @@ class TestClase1Suma {
 		assertEquals(resultado, resultadoEsperado);
 	}
 	
-	// Caso Resultado mayor que Integer.MAX_VALUE
+	// Caso Suma mayor que Integer.MAX_VALUE, Resultado Integer.MAX_VALUE
 	@Test
 	void testSumaNumEntInfinitoPositivo() {
 		int resultado = Clase1Suma.sumaNumEnt(1, Integer.MAX_VALUE);
@@ -76,7 +85,7 @@ class TestClase1Suma {
 		assertEquals(resultado, resultadoEsperado);
 	}
 	
-	// Caso Resultado menor que Integer.MIN_VALUE
+	// Caso Suma menor que Integer.MIN_VALUE, Resultado Integer.MIN_VALUE
 	@Test
 	void testSumaNumEntInfinitoNegativo() {
 		int resultado = Clase1Suma.sumaNumEnt(-1, Integer.MIN_VALUE);
@@ -84,18 +93,19 @@ class TestClase1Suma {
 		assertEquals(resultado, resultadoEsperado);
 	}
 	
+	
 	/*********************************************
 	 * Pruebas sobre Clase1Suma.sumaNumReal(d,d,d)
 	 *********************************************/
-	// Caso Normal de suma de 2 números reales
+	// Caso Normal de suma de 3 números reales
 	@Test
 	void testSumaNumRealTresSumandosCasoNormal() {
-		double resultado = Clase1Suma.sumaNumReal(11111.111, 22222.222, 33333.333);
+		double resultado = Clase1Suma.sumaNumReal(11111.11, 22222.22, 33333.33);
 		double resultadoEsperado = 66666.66;
 		assertEquals(resultado, resultadoEsperado, 0.01);
 	}
 	
-	// Caso Resultado Infinito Positivo
+	// Caso Sumando Infinito Positivo, Resultado Infinito Positivo
 	@Test
 	void testSumaNumRealTresSumandosInfinitoPositivo() {
 		double resultado = Clase1Suma.sumaNumReal(1, Double.POSITIVE_INFINITY, 1);
@@ -103,7 +113,7 @@ class TestClase1Suma {
 		assertEquals(resultado, resultadoEsperado);
 	}
 	
-	// Caso Resultado Infinito Negativo
+	// Caso Sumando Infinito Negativo, Resultado Infinito Negativo
 	@Test
 	void testSumaNumRealTresSumandosInfinitoNegativo() {
 		double resultado = Clase1Suma.sumaNumReal(-1, Double.NEGATIVE_INFINITY, -1);
@@ -111,7 +121,16 @@ class TestClase1Suma {
 		assertEquals(resultado, resultadoEsperado);
 	}
 
-	// Caso Resultado NaN
+	// Caso Al menos 2 Sumandos son Infinto Positivo y Negativo, Resultado NaN
+	@Test
+	void testSumaNumRealTresSumandosInfinitoMenosInfinitoIgualNaN() {
+		double resultado = Clase1Suma.sumaNumReal(Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, 20000);
+		double resultadoEsperado = Double.NaN;
+		assertEquals(resultado, resultadoEsperado);
+	}
+	
+	
+	// Caso Sumado NaN, Resultado NaN
 	@Test
 	void testSumaNumRealTresSumandosNaN() {
 		double resultado = Clase1Suma.sumaNumReal(1, Double.NaN, 0);
@@ -139,7 +158,7 @@ class TestClase1Suma {
 		System.setIn(input);
 		*/
 		resultado = Clase1Suma.sumatorio();
-		resultadoEsperado = 3;
+		resultadoEsperado = 10;
 		//System.setIn(sysInBackup);
 		assertEquals(resultado, resultadoEsperado, 0.01);
 

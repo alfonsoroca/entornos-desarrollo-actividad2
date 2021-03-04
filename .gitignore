@@ -2,7 +2,10 @@
 *
 
 # Except Calculadora/src & some files
-!Calculadora
-Calculadora/*
-!Calculadora/src
+!Calculadora/
+!.classpath
 !.gitignore
+!.project
+
+!Calculadora/src
+!Calculadora/src/*
