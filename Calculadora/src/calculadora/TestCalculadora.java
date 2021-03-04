@@ -75,26 +75,14 @@ public class TestCalculadora {
 		double double1 = 136531.536944;
 		double double2 = 478931.123568;
 		double double3 = 1323231.268944;
-
-		System.out.println("\n----- Inicio de las pruebas de la Clase2Resta -----\n");
-
-		System.out.println(
-				"\nPrueba del metodo restaNumReal con 2 parametros: " + Clase2Resta.restaNumReal(double1, double2));
-		System.out.println("\nPrueba del metodo restaNumEnt: " + Clase2Resta.restaNumEnt(int1, int2));
-		System.out.println("\nPrueba del metodo restaNumReal con 3 parametros: "
-				+ Clase2Resta.restaNumReal(double1, double2, double3));
-		System.out.println("\nPrueba del metodo acumular-----");
-		System.out.println("\nHas pulsado el 0 y has salido del acumulador. El total acumulado asciende a: "
-				+ Clase2Resta.acumular());
-
 		
-		//Prueba del método restaNumReal con 2 par�metros
+		//Prueba del método restaNumReal con 2 parámetros
 		System.out.println("\nPrueba del método restaNumReal con 2 parámetros: " + Clase2Resta.restaNumReal(double1, double2));
 		
 		//Prueba del método restaNumEnt
 		System.out.println("\nPrueba del método restaNumEnt: " + Clase2Resta.restaNumEnt(int1, int2));
 		
-		//Prueba del método restaNumReal con 3 par�metros
+		//Prueba del método restaNumReal con 3 parámetros
 		System.out.println("\nPrueba del método restaNumReal con 3 parámetros: " + Clase2Resta.restaNumReal(double1, double2, double3));
 		
 		//Prueba del método acumular
