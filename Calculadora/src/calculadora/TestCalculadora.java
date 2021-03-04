@@ -85,12 +85,6 @@ public class TestCalculadora {
 		//Prueba del método restaNumReal con 3 parámetros
 		System.out.println("\nPrueba del método restaNumReal con 3 parámetros: " + Clase2Resta.restaNumReal(double1, double2, double3));
 		
-		//Prueba del método acumular
-		System.out.println("\nPrueba del método acumular-----");
-
-		System.out.println("\nHas pulsado el 0 y has salido del acumulador. El total acumulado asciende a: " + Clase2Resta.acumular());
-
-		System.out.println("\n----- Fin de las pruebas de la Clase2Resta -----\n");
 		
 		//Fin pruebas Clase2Resta
 	}
