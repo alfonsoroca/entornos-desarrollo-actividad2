@@ -1,6 +1,5 @@
 package calculadora;
 
-import java.util.Scanner;
 
 /**
  * Esta clase permite realizar diferentes operaciones de resta:
@@ -76,7 +75,7 @@ public class Clase2Resta {
 	public static double restaNumReal(double a, double b) {
 
 		double min = a;
-		double sust1 = (float) b;
+		double sust1 = b;
 		double resultado = min - sust1;
 
 		return resultado;
@@ -169,9 +168,9 @@ public class Clase2Resta {
 
 	public static double restaNumReal(double a, double b, double c) {
 
-		double min = (float) a;
-		double sust1 = (float) b;
-		double sust2 = (float) c;
+		double min = a;
+		double sust1 = b;
+		double sust2 = c;
 		double resultado = (min - sust1) - sust2;
 
 		return resultado;
@@ -233,7 +232,7 @@ public class Clase2Resta {
 	}
 
 	/**
-	 * Pone el valor del campo {@link Clase2Resta#acumulador} a 0.
+	 * Resetea el valor del campo {@link Clase2Resta#acumulador} a 0.
 	 */
 	public static void resetAcumulador() {
 		acumulador = 0;
