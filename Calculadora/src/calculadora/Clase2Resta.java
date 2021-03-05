@@ -175,17 +175,13 @@ public class Clase2Resta {
 
 		return resultado;
 	}
-
+	
+	static double acumulador = 0;
+	
 	/**
-	 * Método que acumula los números introducidos<br>
-	 * <br>
+	 * Método para acumular valores en una variable
 	 * 
-	 * Se introducirán los números por consola hasta que se quiera salir del
-	 * acumulador, para lo que se deberá introducir el caracter 0.<br>
-	 * <br>
-	 * <b>Atención</b> Para introducir decimales se debe utilizar el carácter ","
-	 * (ej. 12345,6485)
-	 * 
+	 * @param numero Valor que se desea añadir a la variable
 	 * @return Retorna un {@code double} con el valor acumulado de todos los números
 	 *         introducidos <br>
 	 *         <br>
@@ -213,8 +209,6 @@ public class Clase2Resta {
 	 *         tipo de dato</li>
 	 *         </ul>
 	 */
-
-	static double acumulador = 0;
 
 	public static double acumular(double numero) {
 		acumulador += numero;
