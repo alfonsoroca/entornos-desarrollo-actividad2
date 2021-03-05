@@ -143,17 +143,17 @@ class TestClase4Cociente {
 	@Test
 	void testInversoInfinitoPositivo() {
 		double obtenido = Clase4Cociente.inverso(Double.POSITIVE_INFINITY);
-		double esperado = 0;
+		double esperado = 0.0;
 		assertEquals(obtenido, esperado);
 	}
 	
 	/*
-	 * Comprobacion Inverso Infinito Positivo
+	 * Comprobacion Inverso Infinito Negativo
 	 */
 	@Test
 	void testInversoInfinitoNegativo() {
 		double obtenido = Clase4Cociente.inverso(Double.NEGATIVE_INFINITY);
-		double esperado = -0;
+		double esperado = -0.0;
 		assertEquals(obtenido, esperado);
 	}
 	
