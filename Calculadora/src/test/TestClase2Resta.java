@@ -6,12 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import calculadora.Clase2Resta;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-	import org.junit.*;
-
-
-	class TestCalse2Resta {
+class TestClase2Resta {
 		
 		/**
 		 * Clase para hacer los test de JUnit de la Clase2Resta de la claculadora realizadar por el compañero @Alfonso
@@ -21,40 +17,45 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 		 * 
 		 */
 
-		@Test
 		
-	//Inicio test de la  clase, primer método  restaNumReal
+		//Inicio test de la  clase, primer método  restaNumReal
 		
+
 		//test para comprobar la resta de dos valores reales
-		 void testrestaNumReal() {
+		@Test
+		void testrestaNumRealDosValores() {
 			double rest1 = Clase2Resta.restaNumReal(5.5, 0.5);
 			double rest1esperado = 5;
 			assertEquals(rest1,rest1esperado);
 			
 		}
 		
-		//test para valor Double.MAX_VALUE y restarle 1 numero que lo cargue
-		void testrestaNumReal(){
-			double rest1=Clase2Resta.restaNumRal(Double.MAX_VALUE, -5);
+		//test para valor Double.MAX_VALUE y restarle 1 numero que lo supere
+		@Test
+		void testrestaNumRealMaxValue(){
+			double rest1=Clase2Resta.restaNumReal(Double.MAX_VALUE, -5);
 			double rest1esperado = Double.MAX_VALUE;
-			assertEqual(rest1,rest1esperado);
+			assertEquals(rest1,rest1esperado);
 		}
 		
-		//test para valor Double.MIN_VALUE y restarle un valor que los cargue
-		void testrestaNumReal(){
-			double rest1=Clase2Resta.restaNumRal(Double.MIN_VALUE, 5);
-			double rest1esperado = Double.MIN_VALUE;
-			assertEqual(rest1,rest1esperado);
+		//test para valor -Double.MAX_VALUE y restarle un valor que lo supere
+		@Test
+		void testrestaNumRealMinValue(){
+			double rest1=Clase2Resta.restaNumReal(-Double.MAX_VALUE, 5);
+			double rest1esperado = -Double.MAX_VALUE;
+			assertEquals(rest1,rest1esperado);
 		}
 		
 		//test usando 1 valor como infinito y otro valor que lo resta
-		void testrestaNumReal(){
+		@Test
+		void testrestaNumRealPositiveInfinity(){
 			double rest1=Clase2Resta.restaNumReal(Double.POSITIVE_INFINITY, -1);
 			double rest1esperado = Double.POSITIVE_INFINITY;
 			assertEquals(rest1,rest1esperado);
 		}
 		//test usando 1 valor como menos infinito y otro valor que lo resta
-		void testrestaNumReal() {
+		@Test
+		void testrestaNumRealNegativeInfinity() {
 			double rest1 = Clase2Resta.restaNumReal(Double.NEGATIVE_INFINITY, -1);
 			double rest1esperado = Double.NEGATIVE_INFINITY;
 			assertEquals(rest1, rest1esperado);
@@ -62,91 +63,98 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 		
 		
 		
-	//test segundo método de la clase resta, restaNumEnt
-		@Test
+		//test segundo método de la clase resta, restaNumEnt
+		
 		//test para verificar la resta de dos numeros enteros
-		void testrestaNumEnt() {
+		@Test
+		void testrestaNumEntDosValores() {
 			int rest1 = Clase2Resta.restaNumEnt(10, -20);
 			int rest1esperado = 30;
 			assertEquals(rest1, rest1esperado);
 		}
 		//test para valor Double.MAX_VALUE y restarle 1 numero que lo cargue
-		void testrestaNumReal(){
-			int rest1=Clase2Resta.restaNumRal(Double.MAX_VALUE, -5);
-			int rest1esperado = Double.MAX_VALUE;
-			assertEqual(rest1,rest1esperado);
+		@Test
+		void testrestaNumEntMaxValue(){
+			int rest1=Clase2Resta.restaNumEnt(Integer.MAX_VALUE, -5);
+			int rest1esperado = Integer.MAX_VALUE;
+			assertEquals(rest1,rest1esperado);
 		}
 		
 		//test para valor Double.MIN_VALUE y restarle un valor que los cargue
-		void testrestaNumReal(){
-			int rest1=Clase2Resta.restaNumRal(Double.MIN_VALUE, 5);
-			int rest1esperado = Double.MIN_VALUE;
-			assertEqual(rest1,rest1esperado);
-		}
-		
-		//test usando 1 valor como infinito y otro valor que lo resta
-		void testrestaNumReal(){
-			int rest1=Clase2Resta.restaNumReal(Double.POSITIVE_INFINITY, -1);
-			int rest1esperado = Double.POSITIVE_INFINITY;
+		@Test
+		void testrestaNumEntMinValue(){
+			int rest1=Clase2Resta.restaNumEnt(Integer.MIN_VALUE, 5);
+			int rest1esperado = Integer.MIN_VALUE;
 			assertEquals(rest1,rest1esperado);
 		}
-		//test usando 1 valor como menos infinito y otro valor que lo resta
-		void testrestaNumReal() {
-			int rest1 = Clase2Resta.restaNumReal(Double.NEGATIVE_INFINITY, -1);
-			int rest1esperado = Double.NEGATIVE_INFINITY;
-			assertEquals(rest1, rest1esperado);
-		}
 		
-	//inicio test del tercer metodo restaNumReala3
+		
+		//inicio test del tercer metodo restaNumReala3
 		
 		@Test
 		//test para verificar la resta de tres numeros reales
-		void testrestaNumReala3() {
-			double restade3= Clase2Resta.restaNumReal(30.78, 500.69, -30.78);
+		void testrestaNumReal3Valores() {
+			double restade3= Clase2Resta.restaNumReal(500.69, 30.78, -30.78);
 			double restade3esperado = 500.69;
-			assertEquals(restade3, restade3esperado);
+			assertEquals(restade3, restade3esperado, 0.01);
 			
 		}
 		
-		//test para valor Double.MAX_VALUE y restarle 1 numero que lo cargue
-		void testrestaNumReal(){
-			double rest1=Clase2Resta.restaNumRal(Double.MAX_VALUE, -5, 2);
+		//test para probar el overflow superior
+		@Test
+		void testrestaNumReal3ValoresMaxValue(){
+			double rest1=Clase2Resta.restaNumReal(Double.MAX_VALUE, -5, 2);
 			double rest1esperado = Double.MAX_VALUE;
-			assertEqual(rest1,rest1esperado);
+			assertEquals(rest1,rest1esperado);
 		}
 		
-		//test para valor Double.MIN_VALUE y restarle un valor que los cargue
-		void testrestaNumReal(){
-			double rest1=Clase2Resta.restaNumRal(Double.MIN_VALUE, 5, 3);
-			double rest1esperado = Double.MIN_VALUE;
-			assertEqual(rest1,rest1esperado);
+		//test para probar el overflow inferior
+		@Test
+		void testrestaNumReal3ValoresMinValue(){
+			double rest1=Clase2Resta.restaNumReal(-Double.MAX_VALUE, 5, 3);
+			double rest1esperado = -Double.MAX_VALUE;
+			assertEquals(rest1,rest1esperado);
 		}
 		
-		//test usando 1 valor como infinito y otro valor que lo resta
-		void testrestaNumReal(){
+		//test Restar a Infinito Positivo 2 números
+		@Test
+		void testrestaNumReal3ValoresPositiveInfinity(){
 			double rest1=Clase2Resta.restaNumReal(Double.POSITIVE_INFINITY, -1, 2);
 			double rest1esperado = Double.POSITIVE_INFINITY;
 			assertEquals(rest1,rest1esperado);
 		}
-		//test usando 1 valor como menos infinito y otro valor que lo resta
-		void testrestaNumReal() {
+		//test Restar a Infinito Negativo 2 números
+		@Test
+		void testrestaNumReal3ValoresNegativeInfinity() {
 			double rest1 = Clase2Resta.restaNumReal(Double.NEGATIVE_INFINITY, -1, 2);
 			double rest1esperado = Double.NEGATIVE_INFINITY;
 			assertEquals(rest1, rest1esperado);
 		}
 		
-	
-		
-		
+		// Caso Acumula 4 números y recupera Acumulador
 		@Test
-		//test para verificar el 
-		void testacumulador() {
-		//	double valoresacumulados = Clase2Resta.acumular();
-		//	double resultadoesperado= Clase2Resta;
+		void testAcumulador() {
+			double resultado = 0;
+			double acumulado = 0;
+			double resultadoEsperado=10;
+			double[] numeros = {1,2,3,4};
+			for (int i=0;i<numeros.length;i++) {
+				acumulado = Clase2Resta.acumular(numeros[i]);
+			}
+			resultado = Clase2Resta.getAcumulador();
 			
-		
+			assertEquals(resultado, resultadoEsperado, 0.01);
 		}
-	
 
+		// Caso Poner a cero Acumulador
+		@Test
+		void testSumatorioPonerACero() {
+			double resultado;
+			double resultadoEsperado=0;
+			Clase2Resta.resetAcumulador();
+			resultado = Clase2Resta.getAcumulador();
+			
+			assertEquals(resultado, resultadoEsperado);
+		}
+	}
 
-}

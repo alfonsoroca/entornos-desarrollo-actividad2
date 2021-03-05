@@ -31,7 +31,7 @@ public class TestCalculadora {
 			System.out.println(valores[i]);
 			Clase1Suma.sumatorio(valores[i]);
 		}
-		System.out.println("el valor de los numeros agregados es : " + Clase1Suma.sumatorio);
+		System.out.println("el valor de los numeros agregados es : " + Clase1Suma.acumulador);
 		
 		System.out.println("\n-----------  FIN PRUEBA cLASE1SUMA --------------\n");
 		//-----------  FIN PRUEBA Clase1Suma --------------
