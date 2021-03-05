@@ -4,13 +4,13 @@ package calculadora;
  * Clase que sirve para comprobar la funcionalidad de las distintas clases y
  * metodos del proyecto calculadora
  * 
+ * @author Alfonso, Rafa, César, Jorge
  */
 
 public class TestCalculadora {
 
 	public static void main(String[] args) {
 
-		
 		//---------- INICIO PRUEBA Clase1Suma -------------
 		//variables compartidas para las pruebas
 		double sumador1 = 20.98;
@@ -54,9 +54,19 @@ public class TestCalculadora {
 		//Prueba del método restaNumReal con 3 parámetros
 		System.out.println("\nPrueba del método restaNumReal con 3 parámetros: " + Clase2Resta.restaNumReal(double1, double2, double3));
 				
-		//-----------  FIN PRUEBA cLASE1SUMA --------------
+		//-----------  FIN PRUEBA Clase2Resta --------------
 	
 		//---------- INICIO PPRUEBA Clase3Producto -------------
+		//Variables para Clae3Producto y Clase4Cociente
+		double real1 = 25.67;
+		double real2 = 4.78;
+		double ent1 = 6;
+		double ent2 = 2;
+		double zero = 0;
+		double nan = Double.NaN;
+		double masInf = Double.POSITIVE_INFINITY;
+		double menInf = Double.NEGATIVE_INFINITY;
+		
 		// Prueba Clase3Producto
 		System.out.println("\n" + "\n" + "Prueba multiplicarEntero:" + Clase3Producto.multiplicarEntero(-2, 4)  );
 		System.out.println("Prueba multiplicarDouble: " + Clase3Producto.multiplicarDouble(masInf, ent2));
@@ -67,14 +77,7 @@ public class TestCalculadora {
 		
 		//---------- INICIO PRUEBA Clase4Cociente -------------
 		// Prueba Clase4Cociente
-		double real1 = 25.67;
-		double real2 = 4.78;
-		double ent1 = 6;
-		double ent2 = 2;
-		double zero = 0;
-		double nan = Double.NaN;
-		double masInf = Double.POSITIVE_INFINITY;
-		double menInf = Double.NEGATIVE_INFINITY;
+		
 		// divisionReales
 		System.out.println("Prueba metodo divisionReales");
 		System.out.println(Clase4Cociente.divisionReales(real1, real2));
@@ -90,7 +93,6 @@ public class TestCalculadora {
 		System.out.println("Prueba metodo raizCuadrada");
 		System.out.println(Clase4Cociente.raizCuadrada(nan));
 		//-----------  FIN PRUEBA Clase4Cociente --------------
-
 	}
 
 }
