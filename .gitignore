@@ -1,11 +1,13 @@
-# Exclude all 
+#Ignore All
 *
 
 # Except Calculadora/src & some files
-!Calculadora/
-!.classpath
 !.gitignore
+!.classpath
 !.project
-
+!Calculadora
+Calculadora/*
 !Calculadora/src
 !Calculadora/src/*
+
+

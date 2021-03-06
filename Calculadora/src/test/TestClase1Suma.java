@@ -2,13 +2,6 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
 import org.junit.jupiter.api.Test;
 
 import calculadora.Clase1Suma;
@@ -79,7 +72,7 @@ class TestClase1Suma {
 	
 	// Caso Suma mayor que Integer.MAX_VALUE, Resultado Integer.MAX_VALUE
 	@Test
-	void testSumaNumEntInfinitoPositivo() {
+	void testSumaNumEntIntegerMaxValue() {
 		int resultado = Clase1Suma.sumaNumEnt(1, Integer.MAX_VALUE);
 		int resultadoEsperado = Integer.MAX_VALUE;
 		assertEquals(resultado, resultadoEsperado);
@@ -87,7 +80,7 @@ class TestClase1Suma {
 	
 	// Caso Suma menor que Integer.MIN_VALUE, Resultado Integer.MIN_VALUE
 	@Test
-	void testSumaNumEntInfinitoNegativo() {
+	void testSumaNumEntIntegerMinValue() {
 		int resultado = Clase1Suma.sumaNumEnt(-1, Integer.MIN_VALUE);
 		int resultadoEsperado = Integer.MIN_VALUE;
 		assertEquals(resultado, resultadoEsperado);
@@ -141,27 +134,76 @@ class TestClase1Suma {
 	/**************************************
 	 * Pruebas sobre Clase1Suma.sumatorio()
 	 **************************************/
+	
+	// Caso Acumula 4 números y recupera Acumulador
 	@Test
-	void testSumatorio() throws IOException {
+	void testSumatorio() {
+		Clase1Suma.resetAcumulador();
 		double resultado=0;
-		double resultadoEsperado;
+		double resultadoEsperado=10;
 		double[] numeros = {1,2,3,4};
-		/*
-		InputStream sysInBackup = System.in; // backup System.in to restore it later
-		
-		ByteArrayOutputStream datos = new ByteArrayOutputStream();
-		DataOutputStream out = new DataOutputStream(datos);
-		for(int i=0;i<numeros.length;i++) {
-			out.writeDouble(numeros[i]);
+		for (int i=0;i<numeros.length;i++) {
+			Clase1Suma.sumatorio(numeros[i]);
 		}
-		InputStream input = new ByteArrayInputStream(datos.toByteArray());
-		System.setIn(input);
-		*/
-		resultado = Clase1Suma.sumatorio();
-		resultadoEsperado = 10;
-		//System.setIn(sysInBackup);
+		resultado = Clase1Suma.getAcumulador();
 		assertEquals(resultado, resultadoEsperado, 0.01);
-
 	}
 
+	// Caso Acumular Infinito Positivo
+	@Test
+	void testSumatorioPositiveInfinity() {
+		Clase1Suma.resetAcumulador();
+		double resultado=0;
+		double resultadoEsperado=Double.POSITIVE_INFINITY;
+		double[] numeros = {Double.POSITIVE_INFINITY,2,3,4};
+		for (int i=0;i<numeros.length;i++) {
+			Clase1Suma.sumatorio(numeros[i]);
+		}
+		resultado = Clase1Suma.getAcumulador();
+		assertEquals(resultado, resultadoEsperado, 0.01);
+	}
+	
+	// Caso Acumular Infinito Negativo
+	@Test
+	void testSumatorioNegativeInfinity() {
+		Clase1Suma.resetAcumulador();
+		double resultado=0;
+		double resultadoEsperado=Double.NEGATIVE_INFINITY;
+		double[] numeros = {Double.NEGATIVE_INFINITY,2,3,4};
+		for (int i=0;i<numeros.length;i++) {
+			Clase1Suma.sumatorio(numeros[i]);
+		}
+		resultado = Clase1Suma.getAcumulador();
+		assertEquals(resultado, resultadoEsperado, 0.01);
+	}
+	
+	// Caso Acumular NaN
+	@Test
+	void testSumatorioNaN() {
+		Clase1Suma.resetAcumulador();
+		double resultado=0;
+		double resultadoEsperado=Double.NaN;
+		double[] numeros = {Double.NaN,2,3,4};
+		for (int i=0;i<numeros.length;i++) {
+			Clase1Suma.sumatorio(numeros[i]);
+		}
+		resultado = Clase1Suma.getAcumulador();
+		assertEquals(resultado, resultadoEsperado, 0.01);
+	}
+	
+	// Caso Poner a cero Acumulador
+	@Test
+	void testSumatorioPonerACero() {
+		Clase1Suma.resetAcumulador();
+		double resultado=0;
+		double resultadoEsperado=0;
+		double[] numeros = {1,2,3,4};
+		for (int i=0;i<numeros.length;i++) {
+			Clase1Suma.sumatorio(numeros[i]);
+		}
+		Clase1Suma.resetAcumulador();
+		resultado = Clase1Suma.getAcumulador();
+		
+		assertEquals(resultado, resultadoEsperado);
+	}
 }
