@@ -4,10 +4,10 @@ package calculadora;
 /**
  * Esta clase permite realizar diferentes operaciones de resta:
  * <ul>
- * <li>Resta de dos números reales</li>
- * <li>Resta de dos números enteros</li>
- * <li>Resta de tres números reales</li>
- * <li>Resta recurrente</li>
+ * <li>Resta de dos números reales {@link #restaNumReal(double, double) restaNumerosReales}</li>
+ * <li>Resta de dos números enteros {@link #restaNumEnt(int, int) restaNumerosEnteros}</li>
+ * <li>Resta de tres números reales {@link #restaNumReal(double, double, double) restaTresNumerosReales}</li>
+ * <li>Acumular {@link #acumular(double) acumular}</li>
  * </ul>
  * <br>
  * Casos especiales
@@ -121,11 +121,11 @@ public class Clase2Resta {
 		long resultado = min - sust;
 
 		if (resultado > Integer.MAX_VALUE) {
-			System.out.println("Error producido por superar el valor máximo permitido:");
+			System.out.println("Error producido por superar el valor máximo permitido.");
 			return Integer.MAX_VALUE;
 
 		} else if (resultado < Integer.MIN_VALUE) {
-			System.out.println("Error producido por superar el valor mínimo permitido:");
+			System.out.println("Error producido por superar el valor mínimo permitido.");
 			return Integer.MIN_VALUE;
 
 		} else
@@ -176,7 +176,7 @@ public class Clase2Resta {
 		return resultado;
 	}
 	
-	static double acumulador = 0;
+	static double acumulado = 0;
 	
 	/**
 	 * Método para acumular valores en una variable
@@ -211,25 +211,25 @@ public class Clase2Resta {
 	 */
 
 	public static double acumular(double numero) {
-		acumulador += numero;
-		return acumulador;
+		acumulado += numero;
+		return acumulado;
 	}
 
 	/**
-	 * Devuelve el valor actual del campo {@link Clase2Resta#acumulador}
+	 * Devuelve el valor actual del campo {@link Clase2Resta#acumulado}
 	 * 
-	 * @return El valor del campo {@link Clase2Resta#acumulador}
+	 * @return El valor del campo {@link Clase2Resta#acumulado}
 	 */
 
-	public static double getAcumulador() {
-		return acumulador;
+	public static double getAcumulado() {
+		return acumulado;
 	}
 
 	/**
-	 * Resetea el valor del campo {@link Clase2Resta#acumulador} a 0.
+	 * Resetea el valor del campo {@link Clase2Resta#acumulado} a 0.
 	 */
-	public static void resetAcumulador() {
-		acumulador = 0;
+	public static void resetAcumulado() {
+		acumulado = 0;
 	}
 
 }

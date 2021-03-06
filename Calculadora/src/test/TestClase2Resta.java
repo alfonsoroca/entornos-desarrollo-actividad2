@@ -131,7 +131,7 @@ class TestClase2Resta {
 			assertEquals(rest1, rest1esperado);
 		}
 		
-		// Caso Acumula 4 números y recupera Acumulador
+		// Caso Acumula 4 números y recupera Acumulado
 		@Test
 		void testAcumulador() {
 			double resultado = 0;
@@ -141,7 +141,7 @@ class TestClase2Resta {
 			for (int i=0;i<numeros.length;i++) {
 				acumulado = Clase2Resta.acumular(numeros[i]);
 			}
-			resultado = Clase2Resta.getAcumulador();
+			resultado = Clase2Resta.getAcumulado();
 			
 			assertEquals(resultado, resultadoEsperado, 0.01);
 		}
@@ -151,8 +151,8 @@ class TestClase2Resta {
 		void testSumatorioPonerACero() {
 			double resultado;
 			double resultadoEsperado=0;
-			Clase2Resta.resetAcumulador();
-			resultado = Clase2Resta.getAcumulador();
+			Clase2Resta.resetAcumulado();
+			resultado = Clase2Resta.getAcumulado();
 			
 			assertEquals(resultado, resultadoEsperado);
 		}
