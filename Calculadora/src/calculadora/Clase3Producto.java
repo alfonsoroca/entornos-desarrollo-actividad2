@@ -23,10 +23,13 @@ public class Clase3Producto {
 	}
 
 	/** 
-	 * 
+	 * Método para multiplicar dos números reales.
+	 * <br>
+	 * Casos Especiales:
+	 * <ul>
 	 * <li>Si un parametro se multiplica por infinito(positivo) el resultado sera Infinito(positivo) </li>
 	 * <li>Si un parametro se multiplica por infinito(negativo) el resultado sera Infinito(negativo) </li>
-	 * 
+	 * </ul>
 	 * @param num1  Numero real que es el primer factor
 	 * @param num2  Numero real que es el segundo factor
 	 * @return devuelve el producto de los dos factores
@@ -41,9 +44,13 @@ public class Clase3Producto {
 	}
 
 	/**
-	 * 
+	 * Método para multiplicar tres númerso reales.
+	 * <br>
+	 * Casos Especiales:
+	 * <ul>
 	 * <li>Si uno de los parametros es infinito(positivo) el resultado sera Infinito(positivo) </li>
 	 * <li>Si uno de los parametros es infinito(negativo) el resultado sera Infinito(negativo) </li>
+	 * </ul>
 	 * 
 	 * @param num1  Numero real que es el primer factor
 	 * @param num2  Numero real que es el segundo factor
@@ -59,10 +66,14 @@ public class Clase3Producto {
 	}
 
 	/**
-	 * 
+	 * Método para elevar un número a una potencia.
+	 * <br>
+	 * Casos Especiales:
+	 * <ul>
 	 * <li>Cuando la base es elevada a Infinito(positivo) el resultado dará Infinito(positivo)</li>
 	 * <li>Cuando la base es Infinito(positivo) y el exponente es Infinito(negativo) el resultado será 0</li>
 	 * <li>Cuando la base es 0 y exponente 0 el resultado dará 1</li>
+	 * </ul>
 	 * 
 	 * @param num1  Numero real que es la base
 	 * @param num2  Numero real que es el exponente

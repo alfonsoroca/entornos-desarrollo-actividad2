@@ -1,7 +1,7 @@
 package calculadora;
 
 /**
- * <li>Esta clase permite realizar diferentes operaciones de tipo suma:</li>
+ * Esta clase permite realizar diferentes operaciones de tipo suma:
  * <ul>
  * <li>Suma de dos números reales</li>
  * <li>Suma de dos números enteros</li>
@@ -9,7 +9,7 @@ package calculadora;
  * <li>Suma acumulativa</li>
  * </ul>
  * 
- * <li>Casos Especiales</li>
+ * Casos Especiales:
  * <ul>
  * <li>Cualquier número entero o real al que se le suma +infinito da como
  * resultado +infinito</li>
@@ -47,7 +47,6 @@ public class Clase1Suma {
 	 *         como resultado -infinito</li>
 	 *         <li>Cualquier suma empleando en los sumandos valores de +infinito y
 	 *         -infinito dan como resultado un valor NaN</li>
-	 *         </ul>
 	 *         <li>Si cualquiera de los sumandos en NaN, el resultado será NaN</li>
 	 *         </ul>
 	 * 
@@ -76,6 +75,7 @@ public class Clase1Suma {
 	 *         devolverá {@value Integer#MAX_VALUE}</li>
 	 *         <li>Si la suma da como resultado un valor menor que {@value Integer#MIN_VALUE}
 	 *         devolverá {@value Integer#MIN_VALUE}</li>
+	 *         </ul>
 	 *
 	 */
 
@@ -131,9 +131,8 @@ public class Clase1Suma {
 	/**
 	 * Método para sumar acumulativamente diferentes números reales
 	 * 
-	 * @param sumador    Número real que se quiere añadir al sumatorio
-	 * @param acumulador almacenamos el valor del sumatorio de todos los números
-	 *                   introducidos
+	 * @param sumador    Número real que se quiere añadir al {@link Clase1Suma#acumulador}.
+	 * @return El valor actualizado de {@link Clase1Suma#acumulador}
 	 *                   
 	 *		<ul>
 	 *     	<li>Cualquier número entero o real al que se le suma
